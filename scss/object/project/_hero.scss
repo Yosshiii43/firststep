@@ -4,69 +4,118 @@ hero
 @use "../../foundation/forwards" as *;
 
 .p-hero {
+  position: relative;
   width: 100vw;
+  overflow: hidden;
+  margin-block: 0 rem(36);
+  margin-inline: auto;
+  @include mq(tab) {
+    margin-block:0 rem(72);
+  }
 
-  &__title {
-    margin-block: rem(16);
-    margin-inline: auto ;
-    width: rem(200);
-    height: auto;
-    aspect-ratio: auto;
-    @include mq(tab) {
-      margin-block-start: rem(48);
-      margin-block-end: calc( rem(48) - rclamp(0, 48, 768, 1440));
-      margin-inline: rem(48) auto;
-      width: rem(322);
+  &__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none; 
+    z-index: 0;
+
+    //サークル
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: rclamp(80, 160, 375, 1440);
+      height: rclamp(80, 160, 375, 1440);
+      border-radius: 50%;
+      background-color: $color-main;
+      opacity: 0.5;
+      top: calc(-1 * rem(20));
+      right: calc(-1 * rem(19));
+      @include mq(tab) {
+        top: calc(-1 * rem(37));
+        right: calc(-1 * rem(30));
+      }
+    }
+
+    //足跡
+    &::after {
+      @include mq(tab){
+        position: absolute;
+        display: block;
+        content: "";
+        width: rclamp(200, 391, 375, 1440);
+        height: rclamp(200, 392, 375, 1440);
+        background: url(/img/img_footprints01.png) no-repeat center/contain;
+        opacity: 0.5;
+        top: rem(171);
+        left: calc(-1 * rem(132));
+        z-index: 0;
+      }
     }
   }
 
-  &__body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(28);
-    margin-bottom: rem(28);
-    @include mq(tab) {
-      padding-inline: rclamp(60, 300, 768, 1440) rclamp(60, 145, 768, 1440);
-      flex-direction: row-reverse;
-      gap: rem(24);
-      margin-bottom: rclamp(48, 81, 768, 1440);
-    }
-    .p-hero__img {
-      width: 100%;
+  &__inner {
+    .p-hero__title {
+      margin-block-start: rem(16);
+      margin-block-end: rem(16);
+      margin-inline: auto ;
+      width: rem(200);
       height: auto;
       aspect-ratio: auto;
       @include mq(tab) {
-        flex-basis: 63.8%;
+        margin-block-start: rem(48);
+        margin-block-end: calc( rem(48) - rclamp(0, 47, 768, 1440));
+        margin-inline: rem(48) auto;
+        width: rem(322);
       }
     }
 
-    .p-hero__text {
-      margin-bottom: rem(28);
-      flex-shrink: 0;
+    .p-hero__body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: rem(28);
+      margin-bottom: rem(29);
       @include mq(tab) {
-        margin-bottom: 0;
+        padding-inline: rclamp(60, 300, 768, 1440) rclamp(60, 145, 768, 1440);
+        flex-direction: row-reverse;
+        gap: rem(24);
+        margin-bottom: rclamp(48, 81, 768, 1440);
       }
-
-      p:first-child {
-        font-size: rem(32);
-        line-height: 1.25;
-        text-align: center;
-        margin-bottom: rem(32);
+      .p-hero__img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
         @include mq(tab) {
-          text-align: left;
-          font-size: rclamp(36, 48, 768, 1440);
+          flex-basis: 63.8%;
         }
       }
 
-      p:last-child {
-        font-size: rem(16);
-        line-height: 1.75;
-        display: inline-block;
-        width: max-content;
-        @include mq(tab) {
-          font-size: rclamp(18, 20, 768, 1440);
+      .p-hero__text {
+        flex-shrink: 0;
+
+        p:first-child {
+          font-size: rem(32);
+          line-height: 1.25;
+          text-align: center;
+          margin-bottom: rem(32);
+          @include mq(tab) {
+            text-align: left;
+            font-size: rclamp(36, 48, 768, 1440);
+            margin-bottom: rem(64);
+          }
+        }
+
+        p:last-child {
+          font-size: rem(16);
+          line-height: 1.75;
+          display: inline-block;
+          width: max-content;
+          @include mq(tab) {
+            font-size: rclamp(18, 20, 768, 1440);
+          }
         }
       }
     }
