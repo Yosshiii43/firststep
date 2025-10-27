@@ -1,0 +1,59 @@
+/******************************
+button
+******************************/
+@use "../../foundation/forwards" as *;
+
+.c-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(16);
+  flex-shrink: 0;
+  width: rem(140);
+  height: rem(140);
+  padding: rem(8);
+  border-radius: 35px;
+
+  @include mq(tab){
+    width: rclamp(316, 400, 768, 1440);
+    height: rem(86);
+    gap: 0;
+    border-radius: 43px;
+  }
+
+  &__kinds,
+  &__name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    text-align: center;
+    line-height: 1.25;
+    @include mq(tab) {
+      line-height: 1.75;
+    }
+  }
+  &__kinds{
+    font-size: rem(20);
+    font-weight: 700;
+    @include mq(tab) {
+      font-size: rem(24);
+    }
+  }
+  &__name{
+    font-size: rem(16);
+    font-weight: 500;
+  }
+}
+
+.c-button--user {
+  background-color: $color-sub1;
+  box-shadow: 0 4px 4px 0 #FFCFA0;
+}
+
+.c-button--supporter {
+  background-color: $color-sub2;
+  box-shadow: 0 4px 4px 0 #EEE1FF;
+}

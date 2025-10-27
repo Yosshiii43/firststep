@@ -1,0 +1,87 @@
+/******************************
+hero
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-hero {
+  width: 100vw;
+
+  &__title {
+    margin-block: rem(16);
+    margin-inline: auto ;
+    width: rem(200);
+    height: auto;
+    aspect-ratio: auto;
+    @include mq(tab) {
+      margin-block-start: rem(48);
+      margin-block-end: calc( rem(48) - rclamp(0, 48, 768, 1440));
+      margin-inline: rem(48) auto;
+      width: rem(322);
+    }
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(28);
+    margin-bottom: rem(28);
+    @include mq(tab) {
+      padding-inline: rclamp(60, 300, 768, 1440) rclamp(60, 145, 768, 1440);
+      flex-direction: row-reverse;
+      gap: rem(24);
+      margin-bottom: rclamp(48, 81, 768, 1440);
+    }
+    .p-hero__img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: auto;
+      @include mq(tab) {
+        flex-basis: 63.8%;
+      }
+    }
+
+    .p-hero__text {
+      margin-bottom: rem(28);
+      flex-shrink: 0;
+      @include mq(tab) {
+        margin-bottom: 0;
+      }
+
+      p:first-child {
+        font-size: rem(32);
+        line-height: 1.25;
+        text-align: center;
+        margin-bottom: rem(32);
+        @include mq(tab) {
+          text-align: left;
+          font-size: rclamp(36, 48, 768, 1440);
+        }
+      }
+
+      p:last-child {
+        font-size: rem(16);
+        line-height: 1.75;
+        display: inline-block;
+        width: max-content;
+        @include mq(tab) {
+          font-size: rclamp(18, 20, 768, 1440);
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(16);
+    padding-block: rem(12);
+    padding-inline: var(--inner-pl) var(--inner-pr);
+
+    @include mq(tab) {
+      padding-block: 0 rem(4);
+    }
+  }
+}

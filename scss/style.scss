@@ -7,5 +7,10 @@
 
 ////object
 //component
+@use "./object/component/font";
+@use "./object/component/button";
+
 //project
+@use "./object/project/hero";
+
 //utility
