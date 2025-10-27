@@ -34,7 +34,7 @@ header
         width: rem(160);
         height: rem(160);
         top: calc(-1 * rem(37));
-        right: calc(-1 * rem(290));
+        right: calc(-1 * rclamp(80, 290, 1024, 1440));
       }
     }
   }
