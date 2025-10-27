@@ -3,19 +3,26 @@
 ******************************/
 @use "../foundation/forwards" as *;
 
-.l-inner-bg {
+.l-inner--bg {
   width: 100vw;
-  max-width: var(--inner-max);
+  margin-inline: var(--inner-pl) var(--inner-pr);
+  max-width: rem(920);
   margin-inline: auto;
   box-sizing: border-box;
   overflow: visible;
 }
 
-.l-inner {
+.l-inner--hero {
   width: 100vw;
-  overflow: hidden;
+  padding-inline: var(--inner-pl) var(--inner-pr);
   margin-inline: auto;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+
+  @include mq(pc) {
+    max-width: calc(rem(995) + rclamp(60, 180, 1024, 1440) + rem(25));
+    padding-inline: rclamp(60, 180, 1024, 1440) rem(25);
+  }
 }

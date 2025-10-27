@@ -11,6 +11,7 @@
 @use "./object/component/button";
 
 //project
+@use "./object/project/header" as ph;
 @use "./object/project/hero";
 
 //utility

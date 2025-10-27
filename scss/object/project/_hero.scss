@@ -19,59 +19,32 @@ hero
     pointer-events: none; 
     z-index: 0;
 
-    //サークル
-    &::before {
-      position: absolute;
-      display: block;
-      content: "";
-      width: rclamp(80, 160, 375, 1440);
-      height: rclamp(80, 160, 375, 1440);
-      border-radius: 50%;
-      background-color: $color-main;
-      opacity: 0.5;
-      top: calc(-1 * rem(20));
-      right: calc(-1 * rem(19));
-      @include mq(tab) {
-        top: calc(-1 * rem(37));
-        right: calc(-1 * rem(30));
-      }
-    }
-
     //足跡
     &::after {
       @include mq(tab){
         position: absolute;
         display: block;
         content: "";
-        width: rclamp(200, 391, 375, 1440);
-        height: rclamp(200, 392, 375, 1440);
+        width: rem(391);
+        height: rem(392);
         background: url(/img/img_footprints01.png) no-repeat center/contain;
         opacity: 0.5;
-        top: rem(171);
-        left: calc(-1 * rem(132));
+        top: rem(47);
+        left: calc(-1 * rem(180));
         z-index: 0;
       }
+      @include mq(pc) {
+        left: calc(-1 * rclamp(200, 391 ,1024, 1440));
+      }
+
     }
   }
 
   &__inner {
-    .p-hero__title {
-      margin-block-start: rem(16);
-      margin-block-end: rem(16);
-      margin-inline: auto ;
-      width: rem(200);
-      height: auto;
-      aspect-ratio: auto;
-      @include mq(tab) {
-        margin-block-start: rem(48);
-        margin-block-end: calc( rem(48) - rclamp(0, 47, 768, 1440));
-        margin-inline: rem(48) auto;
-        width: rem(322);
-      }
-    }
-
     .p-hero__body {
       width: 100%;
+      max-width: rem(412);
+      margin-inline: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -79,8 +52,9 @@ hero
       gap: rem(28);
       margin-bottom: rem(29);
       @include mq(tab) {
-        padding-inline: rclamp(60, 300, 768, 1440) rclamp(60, 145, 768, 1440);
+        max-width: none;
         flex-direction: row-reverse;
+        justify-content: space-between;
         gap: rem(24);
         margin-bottom: rclamp(48, 81, 768, 1440);
       }
@@ -89,7 +63,7 @@ hero
         height: auto;
         aspect-ratio: auto;
         @include mq(tab) {
-          flex-basis: 63.8%;
+          flex-basis: 63.81%;
         }
       }
 
@@ -104,7 +78,7 @@ hero
           @include mq(tab) {
             text-align: left;
             font-size: rclamp(36, 48, 768, 1440);
-            margin-bottom: rem(64);
+            margin-bottom: rclamp(32, 64, 768, 1440);
           }
         }
 
