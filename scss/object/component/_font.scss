@@ -1,0 +1,15 @@
+/******************************
+font
+******************************/
+@use "../../foundation/forwards" as *;
+
+.c-notoSans {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.c-zenMaru {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,130 @@
+/******************************
+mixin
+******************************/
+@use "sass:math";
+@use "sass:map";
+
+///pxからremを算出
+$base-font-size: 16;
+
+@function rem($px) {
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+
+///Min-Max-Value Interpolation
+@function rclamp($min, $max, $minViewport, $maxViewport) {
+  $vwScale: ($max - $min) / ($maxViewport - $minViewport);  // vw単位でのスケールを計算
+  $baseOffset: $min - $minViewport * $vwScale;  // 基準となる最小値からのオフセットを計算
+
+  $minRem: $min / 16;  // 最小値をremに変換
+  $maxRem: $max / 16;  // 最大値をremに変換
+  $baseOffsetRem: $baseOffset / 16;  // オフセットをremに変換
+  $vwScaleRem: $vwScale * 100;  // vwスケールを調整
+
+  @return clamp(#{$minRem}rem, #{$baseOffsetRem}rem + #{$vwScaleRem}vw, #{$maxRem}rem);
+}
+
+// 使用例
+//.example {
+//  font-size: rclamp(24, 64, 375, 1440);
+
+
+/// メディアクエリ  (min‑width ベース = SPファースト)
+$breakpoint: (
+  sp: 'screen and (max-width: 767px)',
+  tab: 'screen and (min-width: 768px)',
+  pc: 'screen and (min-width: 1024px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}
+//使用例 
+//@include mq(tab) {
+//  background-color: #ffbebe;
+//}
+
+
+/// コンテナクエリ共通
+@mixin cq($container-name, $min-width) {
+  @supports (container-type: inline-size) {
+    @container #{$container-name} (min-width: #{$min-width}) {
+      @content;
+    }
+  }
+}
+//使用例
+//@include cq(main, 744px) {
+//  .p-section {
+//    font-size: 1.4rem;
+//  }
+//}
+
+
+///pxからvwを算出
+$pcDesignSize: 1440;
+$tabDesignSize: 768;
+$spDesignSize: 375;
+
+//PCデザイン用
+@function pc-vw($pixelsVw) {
+    @return math.div($pixelsVw , $pcDesignSize) * 100vw;
+}
+
+//tabletデザイン用
+@function tab-vw($pixelsVw) {
+    @return math.div($pixelsVw , $tabDesignSize) * 100vw;
+}
+
+//SPデザイン用
+@function sp-vw($pixelsVw) {
+    @return math.div($pixelsVw , $spDesignSize) * 100vw;
+}
+
+
+// -----------------------------------------------------------------------------
+// bleed helpers
+// 使い方:
+//   @include bleed-side(right);
+//   @include bleed-side(left);
+//   @include bleed-both();     // 左右ともビュー端まで伸ばす（full-bleed）
+// またはユーティリティクラス:
+//   .u-bleed-right { @include bleed-side(right); }
+// -----------------------------------------------------------------------------
+
+// サイド単体（左または右）をビュー端まで伸ばす
+@mixin bleed-side($side: right) {
+  // レイアウト前提：親は中央寄せ（margin-inline:auto）で幅が <= 100vw
+  // 親に padding-inline がある場合の影響を避けるため content-box を推奨
+  box-sizing: content-box;
+
+  @if $side == right {
+    /* 要素を右にズラして、幅を増やして右端をビュー端に合わせる */
+    margin-right: calc(50% - 50vw);
+  } @else if $side == left {
+    /* 左をビュー端まで伸ばす場合（鏡像） */
+    margin-left: calc(50% - 50vw);
+  } @else {
+    @error "bleed-side: \$side must be 'left' or 'right'";
+  }
+
+  /* ズラした分だけ幅を広げる（右だけ伸ばすためのトリック） */
+  width: calc(100% + (50vw - 50%));
+  overflow: visible; /* 必要に応じて hidden に変更可（ただし切れる可能性あり） */
+}
+
+// 両側をビュー端まで伸ばす（フルブリード）
+@mixin bleed-both() {
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+// --- ユーティリティクラス例（必要なら使う） ---
+.u-bleed-right { @include bleed-side(right); }
+.u-bleed-left  { @include bleed-side(left); }
+.u-bleed-both  { @include bleed-both(); }

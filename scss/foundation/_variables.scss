@@ -1,0 +1,38 @@
+/******************************
+バリアブル
+******************************/
+@use "./mixin" as*;
+
+//// font
+$font-base: "Noto Sans JP", sans-serif;
+$font-secondary: "Zen Maru Gothic", sans-serif;
+
+//color
+$color-text:        #333;
+$color-Placeholder: #6D6D6D; //placeholder
+$color-textOrenge:  #FF855F; //よくある質問内アイコン
+$color-main:        #B1ED89;
+$color-sub1:        #F9993A;
+$color-sub2:        #9866DA;
+$color-bg:          #fff;
+$cilor-grayishBlue: #8CABD9; //BG
+$color-blue:        #7CCFFB; //form
+$color-paleGreen:   #EDF8E5; //fist stepとはBG
+$color-lightGreen:  #DAFFC1; //LINE画面BG
+$color-lightorange: #FFCFA0; //よくある質問BG
+$color-red:         #FF0000; //必須項目
+$color-white:       #fff;
+$color-black:       #000;
+
+//z-index設定
+$z-header : 1000;
+$z-headerTitle: 1100;
+$z-navPanel : 900;
+$z-hamburger : 1200;
+$z-loader : 1500;
+$z-modalOverlay : 1500;
+
+//オリジナルのフォーカスリング
+$focus-color: #2684ff;
+$focus-width: 2px;
+$focus-offset: 3px;
