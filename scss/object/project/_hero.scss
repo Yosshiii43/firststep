@@ -29,7 +29,7 @@ hero
         height: rem(392);
         background: url(/img/img_footprints01.png) no-repeat center/contain;
         opacity: 0.5;
-        top: rem(47);
+        top: rclamp(8, 47, 768, 1440);
         left: calc(-1 * rem(180));
         z-index: 0;
       }
