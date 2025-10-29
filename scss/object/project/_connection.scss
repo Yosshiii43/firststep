@@ -12,42 +12,22 @@
     padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 50px);
   }
 
-  &__bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none; 
-    z-index: 0;
+  &__fp01 {
+    rotate: 180deg;
+    top: rem(30);
+    right: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(32);
+      right: calc(-1 * rclamp(120, 391, 768, 1440));
+    }
+  }
 
-    //足跡
-    &::before,
-    &::after {
-      position: absolute;
-      display: block;
-      content: "";
-      width: rclamp(200, 391, 375, 1440);
-      height: rclamp(200, 392, 375, 1440);
-      background: url(/img/img_footprints01.png) no-repeat center/contain;
-      opacity: 0.5;
-      z-index: 0;
-    }
-    &::before {
-      top: rem(30);
-      right: calc(-1  * rem(100));
-      rotate: 180deg;
-      z-index: 0;
-      @include mq(tab) {
-        top: rem(32);
-        right: calc(-1 * rclamp(120, 392, 768, 1440));
-      }
-    }
-    &::after {
-      top: rem(446);
-      left: calc(-1 * rem(100));
-      z-index: 0;
+  &__fp02 {
+    top: rem(446);
+    left: calc(-1  * rem(100));
     @include mq(tab) {
       top: rem(298);
       left: calc(-1 * rclamp(120, 390, 768, 1440));
-    }
     }
   }
 

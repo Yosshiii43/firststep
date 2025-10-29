@@ -13,26 +13,13 @@ hero
     margin-block: 0 calc(var(--marginDefault) - 6px);
   }
 
-  &__bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none; 
-    z-index: 0;
-
-    //足跡
-    &::after {
-      @include mq(tab){
-        position: absolute;
-        display: block;
-        content: "";
-        width: rem(391);
-        height: rem(392);
-        background: url(/img/img_footprints01.png) no-repeat center/contain;
-        opacity: 0.5;
-        top: rclamp(8, 47, 768, 1440);
-        left: calc(-1 * rclamp(180, 391 ,768, 1440));
-        z-index: 0;
-      }
+  &__fp01 {
+    display: none;
+    @include mq(tab) {
+      display: block;
+      opacity: 0.5;
+      top: rclamp(8, 47, 768, 1440);
+      left: calc(-1 * rclamp(120, 391 ,768, 1440));
     }
   }
 

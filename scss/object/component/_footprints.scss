@@ -1,0 +1,11 @@
+/******************************
+足跡
+******************************/
+@use "../../foundation/forwards" as *;
+
+.c-footprints {
+  position: absolute;
+  width: rclamp(200, 391, 375, 1440);
+  height: rclamp(200, 392, 375, 1440);
+  z-index: 0;
+}

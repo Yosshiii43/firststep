@@ -11,6 +11,9 @@
 @use "./object/component/hedding";
 @use "./object/component/buttons";
 @use "./object/component/button";
+@use "./object/component/blur";
+@use "./object/component/footprints";
+@use "./object/component/footprintsWrap";
 
 //project
 @use "./object/project/header" as ph;
