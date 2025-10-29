@@ -14,11 +14,13 @@
 @use "./object/component/blur";
 @use "./object/component/footprints";
 @use "./object/component/footprintsWrap";
+@use "./object/component/wave";
 
 //project
 @use "./object/project/header" as ph;
 @use "./object/project/hero";
 @use "./object/project/fixedButtons";
 @use "./object/project/connection";
+@use "./object/project/about";
 
 //utility

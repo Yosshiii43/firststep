@@ -1,0 +1,89 @@
+/******************************
+first stepとは
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-about {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+
+  &__inner {
+    padding-block: calc(var(--marginDefault) * 2 - 25px) calc(var(--marginDefault) * 2);
+    padding-inline: var(--inner-pl) var(--inner-pr);
+    background-color: $color-paleGreen;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(32);
+    @include mq(tab) {
+      padding-block: calc(var(--marginDefault) * 2 - 50px) calc(var(--marginDefault) * 2);
+      row-gap: rem(64);
+    }
+
+    .p-about__title {
+      padding: rem(10);
+      @include mq(tab) {
+        padding: 0;
+      }
+    }
+
+    .p-about__voices {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: rem(32);
+      @include mq(tab) {
+        gap: rem(48) rem(24);
+        max-width: rem(920);
+        margin-inline: auto;
+      }
+
+      .p-about__voice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: rem(264);
+
+        p {
+          text-align: center;
+          font-weight: 500;
+          line-height: 1.5;
+          width: 100%;
+          padding: rem(16) rem(12);
+          border-radius: 20px;
+          background-color: $color-white;
+        }
+
+        img {
+          width: rem(120);
+          height: rem(120);
+          flex-shrink: 0;
+          aspect-ratio: 1/1;
+          margin-top: calc(-1 * rem(24));
+          @include mq(tab) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .p-about__text {
+
+      &--em {
+        font-size: rclamp(24, 32, 375, 1024);
+        font-weight: 500;
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      p ~ p {
+        margin-top: rem(24);
+      }
+    }
+  }
+}
