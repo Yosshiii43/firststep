@@ -7,11 +7,8 @@ hero
   position: relative;
   width: 100vw;
   overflow: hidden;
-  margin-block: 0 rem(36);
+  margin-block: 0 var(--marginDefault);
   margin-inline: auto;
-  @include mq(tab) {
-    margin-block:0 rem(72);
-  }
 
   &__bg {
     position: absolute;
