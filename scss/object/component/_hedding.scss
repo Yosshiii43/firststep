@@ -1,0 +1,16 @@
+/******************************
+hedding
+******************************/
+@use "../../foundation/forwards" as *;
+
+.c-hedding2 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: rclamp(32, 48, 375, 1024);
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

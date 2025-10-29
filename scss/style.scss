@@ -8,11 +8,14 @@
 ////object
 //component
 @use "./object/component/font";
+@use "./object/component/hedding";
 @use "./object/component/buttons";
 @use "./object/component/button";
 
 //project
 @use "./object/project/header" as ph;
 @use "./object/project/hero";
+@use "./object/project/fixedButtons";
+@use "./object/project/connection";
 
 //utility
