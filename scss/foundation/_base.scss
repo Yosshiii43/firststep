@@ -9,8 +9,8 @@ base
   --header-h: 164px;
 
   /* spacing vars */
-  --inner-pl: 47.5;   /* SP既定 左padding */
-  --inner-pr: 47.5;   /* SP既定 右padding */
+  --inner-pl: 47.5px;   /* SP既定 左padding */
+  --inner-pr: 47.5px;   /* SP既定 右padding */
   --marginDefault: 36px; /* SP規定 セクション間マージン*/
 }
 
@@ -33,8 +33,8 @@ base
   --header-h: 110px;
 
   /* spacing vars */
-  --inner-pl: 120px;   /* 左padding */
-  --inner-pr: 120px;   /* 右padding */
+  --inner-pl: 60px;   /* 左padding */
+  --inner-pr: 60px;   /* 右padding */
   --marginDefault: 72px; /* セクション間マージン*/
 
   --inner-max: 920px; /* PC画面幅大の時用 仮 */
