@@ -4,9 +4,51 @@
 @use "../../foundation/forwards" as *;
 
 .p-connection {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
   padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 25px);
   @include mq(tab) {
     padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 50px);
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none; 
+    z-index: 0;
+
+    //足跡
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: rclamp(200, 391, 375, 1440);
+      height: rclamp(200, 392, 375, 1440);
+      background: url(/img/img_footprints01.png) no-repeat center/contain;
+      opacity: 0.5;
+      z-index: 0;
+    }
+    &::before {
+      top: rem(30);
+      right: calc(-1  * rem(100));
+      rotate: 180deg;
+      z-index: 0;
+      @include mq(tab) {
+        top: rem(32);
+        right: calc(-1 * rclamp(120, 392, 768, 1440));
+      }
+    }
+    &::after {
+      top: rem(446);
+      left: calc(-1 * rem(100));
+      z-index: 0;
+    @include mq(tab) {
+      top: rem(298);
+      left: calc(-1 * rclamp(120, 390, 768, 1440));
+    }
+    }
   }
 
   &__inner {
@@ -17,5 +59,48 @@
     justify-content: flex-start;
     gap: rclamp(32, 64, 375, 1024);
     margin-inline: auto;
+    position: relative;
+    z-index: 1;
+
+    .p-connection__title {
+      padding: rem(10);
+      @include mq(tab) {
+        padding: 0;
+      }
+    }
+
+    .p-connection__list {
+      display: flex;
+      flex-direction: column;
+      gap: rclamp(16, 32, 375, 768);
+      width: rclamp(216, 376, 375, 768);
+      padding: rem(8) rem(4);
+      @include mq(tab) {
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+
+        &::before {
+          display: block;
+          content: "";
+          width: rem(28);
+          height: rem(28);
+          background: url(/img/icon_lightBulb.svg) no-repeat center/contain;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .p-connection__img {
+      padding: rem(1) rem(10);
+      @include mq(tab) {
+        padding: 0;
+        width: rem(520);
+      }
+    }
   }
 }
