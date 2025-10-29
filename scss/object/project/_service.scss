@@ -43,14 +43,13 @@ first stepができること
       @include mq(tab) {
         flex-direction: row;
         gap: rem(16);
-        padding-block: rem(2.5);
       }
 
       &::before {
         display: block;
         content: "";
-        width: rclamp(80, 120, 375, 1024);
-        height: rclamp(80, 120, 375, 1024);
+        width: rclamp(80, 125, 375, 1024);
+        height: rclamp(80, 125, 375, 1024);
         background: url(/img/img_hearts-and-hands.png) no-repeat center/contain;
       }
 
@@ -58,6 +57,9 @@ first stepができること
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        @include mq(tab) {
+          padding-inline: rem(24);
+        }
       }
     }
     .p-service__overview,
