@@ -5,7 +5,7 @@
 //--------------------------------------------------------------------------
 // heroが画面から消えると画面下にボタンを出す
 //--------------------------------------------------------------------------
-
+/*
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.p-hero')
   const buttons = document.querySelector('.p-fixedButtons');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const io = new IntersectionObserver(callback); //初期化
   io.observe(hero); //監視を開始
 });
-
+*/
 //--------------------------------------------------------------------------
 // 足跡をじわっと出す
 //--------------------------------------------------------------------------
