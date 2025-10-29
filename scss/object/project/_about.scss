@@ -14,10 +14,10 @@ first stepとは
     background-color: $color-paleGreen;
     display: flex;
     flex-direction: column;
-    row-gap: rem(32);
+    gap: rem(32);
     @include mq(tab) {
       padding-block: calc(var(--marginDefault) * 2 - 50px) calc(var(--marginDefault) * 2);
-      row-gap: rem(64);
+      gap: rem(64);
     }
 
     .p-about__title {
