@@ -1,0 +1,25 @@
+/******************************
+fixedButtons
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-fixedButtons {
+  width: 100%;
+  padding-block:rem(12);
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: all .3s ease-in-out;
+}
+
+
+.p-fixedButtons.is--fixed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
