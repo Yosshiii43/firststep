@@ -57,7 +57,10 @@ header
       width: rem(200);
       height: auto;
       aspect-ratio: auto;
+      margin-inline: auto;
       @include mq(tab) {
+        margin-left: 0;
+        margin-right: auto;
         width: rem(322);
       }
       @include mq(pc) {
