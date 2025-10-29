@@ -1,0 +1,148 @@
+/******************************
+first stepができること
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-service {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  padding-block: calc(var(--marginDefault) * 2) calc(var(--marginDefault) + rem(49));
+
+  &__fp01 {
+
+  }
+  &__fp02 {
+
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(32);
+    @include mq(tab) {
+      row-gap: rem(64);
+    }
+
+    .p-service__title{
+      flex-direction: column;
+      align-items: center;
+      @include mq(tab) {
+        flex-direction: row;
+        gap: rem(16);
+        padding-block: rem(2.5);
+      }
+
+      &::before {
+        display: block;
+        content: "";
+        width: rclamp(80, 120, 375, 1024);
+        height: rclamp(80, 120, 375, 1024);
+        background: url(/img/img_hearts-and-hands.png) no-repeat center/contain;
+      }
+
+      > span {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+    .p-service__overview,
+    .p-service__connect {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .p-service__discription {
+        font-size: rclamp(16, 24, 375, 1024);
+        margin-bottom: rem(32);
+        @include mq(tab) {
+          margin-bottom: rem(64);
+        }
+      }
+    }
+
+    .p-service__overview {
+      max-width: rem(280);
+      margin-inline: auto;
+      @include mq(tab) {
+        max-width: none;
+      }
+
+      .p-service__note {
+        font-size: rclamp(14, 16, 375, 1024);
+        line-height: 1.2;
+        width: rem(182);
+        margin-top: rem(32);
+        margin-left: auto;
+        margin-right: 0;
+        text-indent: -1em;
+        
+        @include mq(tab) {
+          line-height: 1.75;
+          width: auto;
+        }
+      }
+    }
+
+    .p-service__connect {
+      .p-service__lineWrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        gap: rem(32) rem(40);
+
+        .p-service__line {
+          width: rem(280);
+          padding: rem(16);
+          background-color: $cilor-grayishBlue;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: rem(48);
+
+          h3 {
+            font-size: rem(24);
+            text-align: center;
+          }
+
+          img {
+            border-radius: 10px;
+          }
+
+          .p-service__lineInner {
+            background-color: $color-lightGreen;
+            border-radius: 10px;
+            padding: rem(8);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem(25);
+          }
+
+          &:last-child{
+            position: relative;
+            margin-bottom: rem(49);
+            @include mq(tab) {
+              margin-bottom: rem(60);
+            }
+            &::after {
+              content: "※画像は配信情報の一部です";
+              font-size: rclamp(14, 16, 375, 1024);
+              line-height: 1.2;
+              position: absolute;
+              bottom: calc(-1 * rem(49));
+              right: 0;
+              @include mq(tab) {
+                line-height: 1.75;
+                bottom: calc(-1 * rem(60));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
