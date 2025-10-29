@@ -14,15 +14,29 @@
 
 .l-inner--hero {
   width: 100vw;
+  margin-inline: auto;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @include mq(tab) {
+    padding-inline: var(--inner-pl) var(--inner-pr);
+  }
+  @include mq(pc) {
+    max-width: calc(rem(995) + rclamp(60, 180, 1024, 1440) + rem(25));
+    padding-inline: rclamp(60, 180, 1024, 1440) rem(25);
+  }
+}
+
+.l-inner--920 {
+  width: 100%;
   padding-inline: var(--inner-pl) var(--inner-pr);
   margin-inline: auto;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
   overflow: hidden;
-
   @include mq(pc) {
-    max-width: calc(rem(995) + rclamp(60, 180, 1024, 1440) + rem(25));
-    padding-inline: rclamp(60, 180, 1024, 1440) rem(25);
+    max-width: calc(rem(920) + var(--inner-pl) + var(--inner-pr));
   }
 }
