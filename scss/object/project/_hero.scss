@@ -7,8 +7,11 @@ hero
   position: relative;
   width: 100vw;
   overflow: hidden;
-  margin-block: 0 var(--marginDefault);
+  margin-block: 0 calc(var(--marginDefault));
   margin-inline: auto;
+  @include mq(tab) {
+    margin-block: 0 calc(var(--marginDefault) - 6px);
+  }
 
   &__bg {
     position: absolute;
@@ -27,13 +30,9 @@ hero
         background: url(/img/img_footprints01.png) no-repeat center/contain;
         opacity: 0.5;
         top: rclamp(8, 47, 768, 1440);
-        left: calc(-1 * rem(180));
+        left: calc(-1 * rclamp(180, 391 ,768, 1440));
         z-index: 0;
       }
-      @include mq(pc) {
-        left: calc(-1 * rclamp(200, 391 ,1024, 1440));
-      }
-
     }
   }
 
