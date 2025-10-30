@@ -13,4 +13,7 @@ hedding
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  @media (max-width: 352px) {
+    font-size: rem(28);
+  }
 }
