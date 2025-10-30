@@ -7,7 +7,7 @@ first stepができること
   position: relative;
   width: 100vw;
   overflow: hidden;
-  padding-block: calc(var(--marginDefault) * 2) calc(var(--marginDefault) + rem(49));
+  padding-block: calc(var(--marginDefault) * 2) calc(var(--marginDefault));
 
   &__fp01 {
     top: rem(1008);
@@ -106,7 +106,13 @@ first stepができること
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center;
-        gap: rem(32) rem(40);
+        gap: rem(32);
+        @include mq(tab) {
+          gap: rem(32) rem(24);
+        }
+        @media (min-width: 1040px) {
+          gap: rem(32) rem(40);
+        }
 
         .p-service__line {
           width: rem(280);
