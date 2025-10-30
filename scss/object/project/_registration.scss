@@ -46,8 +46,10 @@
       z-index: 1;
       display: flex;
       flex-direction: column;
+      width: rem(280);
+      margin-inline: auto;
       @include mq(tab) {
-        max-width: none;
+        width: 100%;
       }
 
       li {
