@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const options = {
     root: null, // ビューポートを基準
-    rootMargin: "0px 0px -60px 0px", // 下方向に60px分早めに発火
-    threshold: 0.5, // 全部入ったら検知
+    rootMargin: "0px 0px -100px 0px", // 下方向に100px分早めに発火
+    threshold: 0.3, // 30%入ったら検知
   };
 
   const observer = new IntersectionObserver((entries, obs) => {
