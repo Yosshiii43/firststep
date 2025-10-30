@@ -4,13 +4,14 @@ base
 @use "forwards" as *;
 
 :root {
-
   /* header vars */
   --header-h: 164px;
 
   /* spacing vars */
-  --inner-pl: 47.5px;   /* SP既定 左padding */
-  --inner-pr: 47.5px;   /* SP既定 右padding */
+  //--inner-pl: 47.5px;   /* SP既定 左padding */
+  //--inner-pr: 47.5px;   /* SP既定 右padding */
+  --inner-pl: clamp(1.25rem, -8.750rem + 50vw, 2.969rem);   /* 左padding 320px:20px 375px:47.5px*/
+  --inner-pr: clamp(1.25rem, -8.750rem + 50vw, 2.969rem);   /* 右padding 320px:20px 375px:47.5px*/
   --marginDefault: 36px; /* SP規定 セクション間マージン*/
 }
 
