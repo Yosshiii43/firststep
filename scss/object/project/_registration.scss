@@ -1,0 +1,67 @@
+/******************************
+簡単３ステップ！LINE登録方法
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-registration {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  padding-block: var(--marginDefault) var(--marginDefault);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(32);
+    @include mq(tab) {
+      row-gap: rem(64);
+    }
+
+    .p-registration__title {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      @include mq(tab) {
+        flex-direction: row;
+        gap: rem(16);
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        width: rclamp(80, 125, 375, 1024);
+        height: rclamp(80, 125, 375, 1024);
+        background: url(/img/img_3footprints.png) no-repeat center/contain;
+      }
+
+      > span {
+        @include mq(tab) {
+          padding-inline: rclamp(24, 72, 768, 1440);
+        }
+      }
+    }
+
+    .p-registration__list {
+      li {
+        display: flex;
+        flex-direction: column;
+        @include mq(tab) {
+          flex-direction: row;
+        }
+      }
+
+      li:first-child {
+        @include mq(tab) {
+          display: none;
+        }
+      }
+
+      li:nth-child(2) {
+        display: none;
+        @include mq(tab) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
