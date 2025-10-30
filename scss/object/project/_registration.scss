@@ -49,6 +49,7 @@
       @include mq(tab) {
         max-width: none;
       }
+
       li {
         position: relative; //縦線設定のため
         display: flex;
@@ -60,23 +61,9 @@
           gap: rem(40);
         }
 
-        /* 縦線用設定 */
-        .p-registration__listBg {
-          position: absolute;
-          inset: 0 0 0 rem(18);
-          z-index: -1;
-        }
-
-        .p-registration__listBg01,
-        .p-registration__listBg02,
-        .p-registration__listBg03,
-        .p-registration__listBg04 {
-          border-left: 4px solid $color-main;
-        }
-
-        .p-registration__listBg04 {
+        > div{
           @include mq(tab) {
-            border-left: none;
+            max-width: 30.43%;
           }
         }
 
@@ -99,16 +86,20 @@
         }
       }
 
-      li:first-child {
+      li:first-child { //SP用
         @include mq(tab) {
           display: none;
         }
       }
 
-      li:nth-child(2) {
+      li:nth-child(2) { //PC用
         display: none;
         @include mq(tab) {
           display: flex;
+        }
+
+        .p-registration_qr {
+          max-width: rem(200);
         }
       }
 
@@ -121,6 +112,7 @@
         }
       }
 
+      /* 丸つき数字 */
       li .p-registration__item01::before{
         position: absolute;
         top: 0;
@@ -142,6 +134,28 @@
       }
     }
 
+
+    /* 縦線用設定 */
+    .p-registration__listBg {
+      position: absolute;
+      inset: 0 0 0 rem(18);
+      z-index: -1;
+    }
+
+    .p-registration__listBg01,
+    .p-registration__listBg02,
+    .p-registration__listBg03,
+    .p-registration__listBg04 {
+      border-left: 4px solid $color-main;
+    }
+
+    .p-registration__listBg04 {
+      @include mq(tab) {
+        border-left: none;
+      }
+    }
+
+    /* PCのみにある表記 */
     .p-registration__note {
       display: none;
       @include mq(tab) {
