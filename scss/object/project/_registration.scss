@@ -177,13 +177,5 @@
         border-left: none;
       }
     }
-
-    /* PCのみにある表記 */
-    .p-registration__note {
-      display: none;
-      @include mq(tab) {
-        display: inline;
-      }
-    }
   }
 }
