@@ -9,6 +9,9 @@
   width: 100%;
   height: rem(25);
   background: url(/img/bg_wave_spgreen.png) repeat-x center/contain;
+  @media (max-width: 374px) {
+    background-size: cover;
+  }
   @include mq(tab) {
     height: rem(50);
     background: url(/img/bg_wave_pcgreen.png) repeat-x center/contain;
