@@ -1,0 +1,114 @@
+/******************************
+子どもに関わる専門資格をお持ちの皆さまへ
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-professional {
+  padding-block: var(--marginDefault) var(--marginDefault);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(32);
+    @include mq(tab) {
+      gap: rem(64);
+    }
+  }
+
+  &__title {
+    color: $color-textOrenge;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(32);
+    @include mq(tab) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+      max-width: rem(810);
+      padding-block: rem(2.5);
+    }
+
+    span {
+      max-width: rem(500);
+      @include mq(tab) {
+        max-width: none;
+        flex-basis: 65.2%;
+      }
+    }
+
+    img {
+      width: rem(200);
+      height: rem(200);
+      @include mq(tab) {
+        width: auto;
+        height: auto;
+        flex-basis: 32.8%;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    @include mq(tab) {
+      max-width: rem(680);
+      gap: rem(64);
+    }
+
+    .p-professional__introduction {
+      @include mq(tab){
+        font-size: rem(24);
+      }
+    }
+
+    .p-professional__reason,
+    .p-professional__subject {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      @include mq(tab) {
+        gap: rem(64);
+      }
+
+      h3 {
+        font-size: rclamp(24, 32, 375, 1024);
+        text-align: center;
+        padding-block: rem(16);
+        background-color: $color-lightGreen;
+        border-radius: 10px;
+        line-height: 1.46;
+        @include mq(tab) {
+          line-height: 1.25;
+        }
+      }
+
+      p {
+        @include mq(tab){
+          font-size: rem(24);
+        }
+      }
+
+      ul {
+        @include mq(tab){
+          font-size: rem(24);
+        }
+        > li {
+        margin-left: 1.2em;
+        position: relative;
+          
+        &::before {
+          content: "・";
+          position: absolute;
+          top: 0.9em;
+          left: -1em;
+          transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}

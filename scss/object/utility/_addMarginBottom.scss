@@ -1,0 +1,11 @@
+/******************************
+margin-bottom追加
+******************************/
+@use "../../foundation/forwards" as *;
+
+.u-addMarginBottom {
+  margin-bottom: rem(10);
+  @include mq(tab) {
+    margin-bottom: rem(16);
+  }
+}

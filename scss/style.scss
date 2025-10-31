@@ -24,5 +24,7 @@
 @use "./object/project/about";
 @use "./object/project/service";
 @use "./object/project/registration";
+@use "./object/project/professional";
 
 //utility
+@use "./object/utility/addMarginBottom";
