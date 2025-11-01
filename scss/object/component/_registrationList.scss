@@ -8,11 +8,8 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  width: rem(280);
   margin-inline: auto;
-  @include mq(tab) {
-    width: 100%;
-  }
+  width: 100%;
 
   .c-registrationList__li {
     position: relative; //縦線設定のため
@@ -42,7 +39,6 @@
       display: flex;
       flex-direction: column;
       gap: rem(24);
-      max-width: rem(258);
       @include mq(tab) {
         max-width: none;
         width: 28.43%;
@@ -51,10 +47,12 @@
       h3 {
         font-size: rclamp(24, 32, 375, 1024);
         line-height: normal;
-        @include mq(tab) {
-          line-height: 1.25;
-        }
       }
+    }
+
+    .c-registrationList__img {
+      max-width: 280px;
+      margin-inline: auto;
     }
   }
 
@@ -114,8 +112,7 @@
   .c-registrationList__bg01,
   .c-registrationList__bg02,
   .c-registrationList__bg03,
-  .c-registrationList__bg03--2,
-  .c-registrationList__bg04 {
+  .c-registrationList__bg03--2{
     border-left: 4px solid $color-main;
   }
 

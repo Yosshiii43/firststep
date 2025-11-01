@@ -10,7 +10,6 @@ first stepとは
 
   &__inner {
     padding-block: calc(var(--marginDefault) * 2 - 25px) calc(var(--marginDefault) * 2);
-    padding-inline: var(--inner-pl) var(--inner-pr);
     background-color: $color-paleGreen;
     display: flex;
     flex-direction: column;

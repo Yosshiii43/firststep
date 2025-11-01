@@ -10,6 +10,9 @@
   margin-inline: auto;
   box-sizing: border-box;
   overflow: visible;
+  @media (min-width: 376px) and (max-width: 767px) {
+    padding-inline: rclamp(47.5, 120, 376, 767) rclamp(47.5, 120, 376, 767);
+  }
 }
 
 .l-inner--hero {
@@ -36,6 +39,25 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  @media (min-width: 376px) and (max-width: 767px) {
+    padding-inline: rclamp(47.5, 120, 376, 767) rclamp(47.5, 120, 376, 767);
+  }
+  @include mq(pc) {
+    max-width: calc(rem(920) + var(--inner-pl) + var(--inner-pr));
+  }
+}
+
+.l-inner--registrationList {
+  width: 100%;
+  padding-inline: var(--inner-pl) var(--inner-pr);
+  margin-inline: auto;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @media (min-width: 376px) and (max-width: 767px) {
+    padding-inline: rclamp(47.5, 120, 376, 767) rclamp(47.5, 120, 376, 767);
+  }
   @include mq(pc) {
     max-width: calc(rem(920) + var(--inner-pl) + var(--inner-pr));
   }
