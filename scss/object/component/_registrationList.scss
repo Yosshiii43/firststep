@@ -27,11 +27,15 @@
 
     > div{
       @include mq(tab) {
-        max-width: 30.43%;
+        width: 30.43%;
       }
     }
 
-    .c-registrationList__item01{
+    .c-registrationList__qr { //qrコード
+      max-width: rem(200);
+    }
+
+    .c-registrationList__text{
       position: relative;
       margin-left: rem(20);
       padding-left: rem(28);
@@ -39,10 +43,14 @@
       flex-direction: column;
       gap: rem(24);
       max-width: rem(258);
+      @include mq(tab) {
+        max-width: none;
+        width: 28.43%;
+      }
 
       h3 {
         font-size: rclamp(24, 32, 375, 1024);
-        line-height: 1.5;
+        line-height: normal;
         @include mq(tab) {
           line-height: 1.25;
         }
@@ -56,28 +64,25 @@
     }
   }
 
-  .c-registrationList__li02 { //PC用
-    display: none;
-    @include mq(tab) {
-      display: flex;
-    }
-
-    .c-registrationList__qr {
-      max-width: rem(200);
-    }
-  }
-
   .c-registrationList__li01,
   .c-registrationList__li02,
-  .c-registrationList__li03 {
+  .c-registrationList__li03,
+  .c-registrationList__li03--2 {
     padding-bottom: rem(32);
     @include mq(tab) {
       padding-bottom: rem(144);
     }
   }
 
+  .c-registrationList__li02 { //PC用
+    display: none;
+    @include mq(tab) {
+      display: flex;
+    }
+  }
+
   /* 丸つき数字 */
-  .c-registrationList__li .c-registrationList__item01::before{
+  .c-registrationList__li .c-registrationList__text::before{
     position: absolute;
     top: 0;
     left: calc(-1 * rem(22));
@@ -86,35 +91,37 @@
     width: rem(40);
     height: rem(40);
   }
-  .c-registrationList__li01 .c-registrationList__item01::before,
-  .c-registrationList__li02 .c-registrationList__item01::before {
+
+  .c-registrationList__li01 .c-registrationList__text::before,
+  .c-registrationList__li02 .c-registrationList__text::before {
     background: url(/img/icon_number1.svg) no-repeat center/contain;
   }
-  .c-registrationList__li03 .c-registrationList__item01::before {
+
+  .c-registrationList__li03 .c-registrationList__text::before {
     background: url(/img/icon_number2.svg) no-repeat center/contain;
   }
-  .c-registrationList__li04 .c-registrationList__item01::before {
+  .c-registrationList__li04 .c-registrationList__text::before {
     background: url(/img/icon_number3.svg) no-repeat center/contain;
   }
-}
 
+  /* 縦線用設定 */
+  .c-registrationList__bg {
+    position: absolute;
+    inset: 0 0 0 rem(18);
+    z-index: -1;
+  }
 
-/* 縦線用設定 */
-.c-registrationList__bg {
-  position: absolute;
-  inset: 0 0 0 rem(18);
-  z-index: -1;
-}
+  .c-registrationList__bg01,
+  .c-registrationList__bg02,
+  .c-registrationList__bg03,
+  .c-registrationList__bg03--2,
+  .c-registrationList__bg04 {
+    border-left: 4px solid $color-main;
+  }
 
-.c-registrationList__bg01,
-.c-registrationList__bg02,
-.c-registrationList__bg03,
-.c-registrationList__bg04 {
-  border-left: 4px solid $color-main;
-}
-
-.c-registrationList__bg04 {
-  @include mq(tab) {
-    border-left: none;
+  .c-registrationList__bg04 {
+    @include mq(tab) {
+      border-left: none;
+    }
   }
 }

@@ -1,0 +1,73 @@
+/******************************
+ご登録方法
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-registration2 {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 25px);
+  @include mq(tab) {
+    padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 50px);
+  }
+
+  &__fp01 {
+    top: rem(128);
+    right: calc(-1  * rem(100));
+    transform: scale(-1, -1);
+    rotate: -90deg;
+    @include mq(tab) {
+      top: rem(300);
+      right: calc(-1 * rclamp(120, 391, 768, 1440));
+    }
+  }
+  &__fp02 {
+    bottom: 0;
+    right: calc(-1  * rem(100));
+    rotate: 180deg;
+    transform: scale(1, 1);
+    rotate: 180deg;
+    @include mq(tab) {
+      right: calc(-1 * rclamp(120, 391, 768, 1440));
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    @include mq(tab) {
+      gap: rem(64);
+    }
+  }
+
+  &__title {
+    padding: rem(10);
+    @include mq(tab) {
+      padding: 0;
+    }
+  }
+
+  .c-button {
+    margin-inline: auto;
+  }
+
+  .c-registrationList__greenBg {
+    padding: rem(10);
+    background-color: $color-lightGreen;
+    border-radius: 10px;
+    width: rem(182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .c-registrationList__li03--2:first-of-type .c-registrationList__text {
+    gap: rem(24);
+  }
+
+  .c-registrationList__li04 h3 {
+    padding-bottom: rem(5);
+  }
+}
