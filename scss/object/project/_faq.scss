@@ -1,0 +1,39 @@
+/******************************
+よくある質問
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-faq {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+
+  &__wrap {
+    padding-block: calc(var(--marginDefault) * 2 - 25px) calc(var(--marginDefault) * 2);
+    background-color: $color-lightorange;
+    @include mq(tab) {
+      padding-block: calc(var(--marginDefault) * 2 - 50px) calc(var(--marginDefault) * 2);
+    }
+  }
+  
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    @include mq(tab) {
+      gap: rem(48);
+    }
+
+    .p-faq__title {
+      font-size: rclamp(32, 48, 375, 1024);
+      font-weight: 700;
+      color: $color-white;
+      text-align: center;
+      line-height: 1.25;
+      padding: rem(10);
+      @include mq(tab) {
+        padding: 0;
+      }
+    }
+  }
+}

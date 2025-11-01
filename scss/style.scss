@@ -16,6 +16,7 @@
 @use "./object/component/footprintsWrap";
 @use "./object/component/wave";
 @use "./object/component/registrationList";
+@use "./object/component/details";
 
 //project
 @use "./object/project/header" as ph;
@@ -27,6 +28,7 @@
 @use "./object/project/registration";
 @use "./object/project/professional";
 @use "./object/project/registration2";
+@use "./object/project/faq";
 
 //utility
 @use "./object/utility/addMarginBottom";

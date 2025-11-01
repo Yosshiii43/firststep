@@ -9,7 +9,7 @@
   overflow: hidden;
   padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 25px);
   @include mq(tab) {
-    padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 50px);
+    padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 50px - 4px);
   }
 
   &__fp01 {

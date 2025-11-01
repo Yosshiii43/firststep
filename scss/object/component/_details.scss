@@ -1,0 +1,86 @@
+/******************************
+アコーディオン（details）
+******************************/
+@use "../../foundation/forwards" as *;
+
+.c-details {
+  background-color: $color-white;
+  padding: rem(16);
+  @include mq(tab) {
+    padding: rem(17) rem(40);
+  }
+
+  &__summary {
+    font-size: rem(16);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: rem(8);
+    &::-webkit-details-marker {
+      display: none;
+    }
+    @include mq(tab) {
+      font-size: rem(24);
+      grid-template-columns: 1fr rem(40);
+      gap: rem(4);
+    }
+
+    .c-details__text {
+      display: grid;
+      grid-template-columns: rem(17) 1fr;
+      gap: rem(8);
+      @include mq(tab) {
+        grid-template-columns: rem(26) 1fr;
+        gap: rem(8);
+      }
+
+      .c-details__q {
+        color: $color-textOrenge;
+        display: inline-block;
+        width: rem(17);
+        @include mq(tab) {
+          width: rem(26);
+        }
+      }
+    }
+    .c-details__icon {
+      width: rem(24);
+      height: rem(24);
+      background: url(/img/icon_plus.svg) no-repeat center/contain;
+      margin-inline: auto;
+      transition: all .4s ease-in-out;
+      @include mq(tab) {
+        width: rem(40);
+        height: rem(40);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: rem(8);
+    display: grid;
+    grid-template-columns: rem(17) 1fr;
+    gap: rem(8);
+    @include mq(tab) {
+      margin-top: rem(25);
+      grid-template-columns: rem(26) 1fr;
+    }
+
+    .c-details__a {
+      display: inline-flex;
+      width: rem(17);
+      color: $color-textOrenge;
+      @include mq(tab) {
+        font-size: rem(26);
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.c-details[open] {
+  .c-details__icon {
+    background: url(/img/icon_minus.svg) no-repeat center/contain;
+    rotate: 180deg;
+  }
+}

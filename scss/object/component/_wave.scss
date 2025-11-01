@@ -24,8 +24,8 @@
 }
 
 .c-wave--orange {
-  background: url(/img/bg_wave_spcorange.png) repeat-x center/contain;
+  background: url(/img/bg_wave_sporange.png) repeat-x center/contain;
   @include mq(tab) {
-    background: url(/img/bg_wave_pccorange.png) repeat-x center/contain;
+    background: url(/img/bg_wave_pcorange.png) repeat-x center/contain;
   }
 }
