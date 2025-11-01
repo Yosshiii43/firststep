@@ -10,21 +10,21 @@ first stepができること
   padding-block: calc(var(--marginDefault) * 2) calc(var(--marginDefault));
 
   &__fp01 {
-    top: rem(1008);
+    top: rem(1099);
     left: calc(-1  * rem(100));
     transform: scale(1, -1);
     @include mq(tab) {
-      top: rclamp(940, 1170, 768, 1440);
+      top: rclamp(940, 1185, 768, 1440);
       left: calc(-1 * rclamp(120, 390, 768, 1440));
     }
   }
   &__fp02 {
-    top: rem(1242);
+    top: rem(1241);
     right: calc(-1  * rem(100));
     rotate: 180deg;
     transform: scale(1, -1);
     @include mq(tab) {
-      top: rclamp(1200, 1314, 768, 1440);
+      top: rclamp(1200, 1347, 768, 1440);
       right: calc(-1 * rclamp(120, 391, 768, 1440));
     }
   }
@@ -137,7 +137,7 @@ first stepができること
           .p-service__lineInner {
             background-color: $color-lightGreen;
             border-radius: 10px;
-            padding: rem(8);
+            padding: rem(8.5) rem(8);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
