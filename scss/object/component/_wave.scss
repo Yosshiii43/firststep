@@ -8,12 +8,24 @@
   content: "";
   width: 100%;
   height: rem(25);
-  background: url(/img/bg_wave_spgreen.png) repeat-x center/contain;
   @media (max-width: 374px) {
     background-size: cover;
   }
   @include mq(tab) {
     height: rem(50);
+  }
+}
+
+.c-wave--green {
+  background: url(/img/bg_wave_spgreen.png) repeat-x center/contain;
+  @include mq(tab) {
     background: url(/img/bg_wave_pcgreen.png) repeat-x center/contain;
+  }
+}
+
+.c-wave--orange {
+  background: url(/img/bg_wave_spcorange.png) repeat-x center/contain;
+  @include mq(tab) {
+    background: url(/img/bg_wave_pccorange.png) repeat-x center/contain;
   }
 }
