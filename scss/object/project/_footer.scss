@@ -1,0 +1,20 @@
+/******************************
+footer
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-footer {
+  &__head {
+    display: block;
+    content: "";
+    width: 100%;
+    height: rclamp(58, 221, 767, 1440);
+    background-image: url(/img/bg_cityscape.png);
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    @media (max-width: 374px) {
+      background-size: cover;
+    }
+  }
+}

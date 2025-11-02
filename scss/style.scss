@@ -20,7 +20,7 @@
 @use "./object/component/form";
 
 //project
-@use "./object/project/header" as ph;
+@use "./object/project/header";
 @use "./object/project/hero";
 @use "./object/project/fixedButtons";
 @use "./object/project/connection";
@@ -33,6 +33,7 @@
 @use "./object/project/distribution";
 @use "./object/project/message";
 @use "./object/project/contact";
+@use "./object/project/footer";
 
 //utility
 @use "./object/utility/addMarginBottom";
