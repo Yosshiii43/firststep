@@ -46,3 +46,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
   targets.forEach((target) => observer.observe(target));
   });
+
+//--------------------------------------------------------------------------
+// お問い合わせフォーム
+//--------------------------------------------------------------------------
+document.querySelectorAll('.js-form').forEach(form => {
+  const body = form.querySelector('.c-form__body');
+  const btn  = form.querySelector('.js-formBtn');
+  const msg  = form.querySelector('.js-thanksMsg');
+
+  if (!form || !btn || !msg || !body) {
+    console.warn('フォーム部品が見つかりません');
+    return;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!form.reportValidity()) return;  // 必須・型チェック
+
+    btn.disabled = true;
+    btn.classList.add('is-disabled'); 
+
+    try {
+      /** 1) HTTP レイヤーのエラーを確認 */
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body  : new FormData(form),
+        credentials: 'same-origin'
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      /** 2) JSON をパースしてアプリケーションエラーを確認 */
+      const data = await res.json();               // ← ここで壊れた JSON なら catch へ
+      if (data.status !== 'ok') throw new Error('API status NG');
+
+      /** 3) 成功処理 */
+      const h = body.offsetHeight;                 // 現在の高さを取得
+      form.style.minHeight = `${h}px`;             // フォーム全体の最小高さを固定
+      body.style.display = 'none';                 // 入力・ボタン・注意書きを隠す
+      msg.style.display  = 'block';                // サンクスメッセージ表示
+
+    } catch (err) {
+      alert('送信に失敗しました。時間をおいて再度お試しください');
+      btn.disabled = false;
+      btn.classList.remove('is-disabled');
+      console.error(err);                          // console で原因を確認できる
+    }
+  });
+});

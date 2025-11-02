@@ -455,7 +455,39 @@
           <p>協賛については以下お問い合わせよりご一報ください</p>
         </section>
       </div>
-    </section>
+    </section><!-- p-message -->
+
+    <section class="p-contact">
+      <div class="p-contact__inner  l-inner--760">
+        <h2 class="p-contact__title c-hedding2">お問い合わせ</h2>
+          <form class="c-form js-form" method="post" action="mail.php">
+            <div class="c-form__body ">
+              <p class="c-form__note">※は必須項目です</p>
+              <input type="hidden" name="ajax" value="1">
+              <div class="c-form__item">
+                <label>
+                  <span class="c-form__label">氏名<span class="c-form__required">※</span></span>
+                  <input class="c-form__input" type="text" name="氏名" placeholder="富士　太郎" required >
+                </label>
+              </div>
+              <div class="c-form__item">
+                <label>
+                  <span class="c-form__label">メールアドレス<span class="c-form__required">※</span></span>
+                  <input class="c-form__input" type="text" name="メールアドレス" autocomplete="email" placeholder="abcde.efg@mail.add" required>
+                </label>
+              </div>
+              <div class="c-form__item c-form__itemColumn">
+                <label>
+                  <span class="c-form__label">お問い合わせ内容<span class="c-form__required">※</span></span>
+                  <textarea class="c-form__input" name="お問い合わせ内容" placeholder="お問い合わせ内容をご記載ください" required></textarea>
+                </label>
+              </div>
+            </div><!-- c-form__body -->
+            <button class="c-form__btn js-formBtn" type="submit">送信する</button>
+            <p class="c-form__message js-thanksMsg" style="display:none">送信が完了しました。</p>
+          </form>
+      </div><!--p-contact__inner -->
+    </section><!-- p-contact -->
 
     <div class="c-buttons p-fixedButtons">
       <a class="c-button c-button--user" href="@@後で入れる@@" target="_blank">

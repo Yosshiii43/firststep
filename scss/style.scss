@@ -17,6 +17,7 @@
 @use "./object/component/wave";
 @use "./object/component/registrationList";
 @use "./object/component/details";
+@use "./object/component/form";
 
 //project
 @use "./object/project/header" as ph;
@@ -31,6 +32,7 @@
 @use "./object/project/faq";
 @use "./object/project/distribution";
 @use "./object/project/message";
+@use "./object/project/contact";
 
 //utility
 @use "./object/utility/addMarginBottom";

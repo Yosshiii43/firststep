@@ -1,0 +1,100 @@
+/******************************
+フォーム
+******************************/
+@use "../../foundation/forwards" as *;
+
+.c-form {
+  width: 100%;
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    margin-bottom: rem(32);
+    @include mq(tab) {
+      gap: rem(20);
+      margin-bottom: rem(64);
+    }
+
+    .c-form__note {
+      color: $color-red;
+    }
+
+    .c-form__item {
+      width: 100%;
+
+      label {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .c-form__label {
+          width: 100%;
+          display: flex;
+          padding: rem(10);
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 10px 10px 0 0;
+          background-color: $color-blue;
+
+          .c-form__required {
+            color: $color-red;
+          }
+        }
+
+        .c-form__input {
+          width: 100%;
+          padding: rem(8) rem(40);
+          border-radius: 0 0 10px 10px;
+          border-right: 2px solid $color-blue;
+          border-bottom: 2px solid $color-blue;
+          border-left: 2px solid $color-blue;
+        }
+      }
+    }
+
+    //横並び
+    .c-form__item:first-of-type label,
+    .c-form__item:nth-of-type(2) label {
+      @include mq(tab) {
+        flex-direction: row;
+      }
+
+      .c-form__label {
+        @include mq(tab) {
+          width: rem(160);
+          border-radius: 10px 0 0 10px;
+        }
+      }
+
+      .c-form__input {
+        @include mq(tab) {
+          border-radius: 0 10px 10px 0;
+          border-top: 2px solid $color-blue;
+          border-right: 2px solid $color-blue;
+          border-bottom: 2px solid $color-blue;
+        }
+      }
+    } 
+
+    .c-form__item:last-of-type .c-form__input {
+      height: rem(300);
+      @include mq(tab) {
+        padding: rem(30) rem(40);
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    width: rem(160);
+    padding-block: rem(10);
+    border-radius: 10px;
+    background-color: $color-blue;
+    margin-inline: auto;
+  }
+}

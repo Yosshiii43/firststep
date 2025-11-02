@@ -1,0 +1,25 @@
+/******************************
+お問い合わせ
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-contact {
+  padding-block: var(--marginDefault) calc(var(--marginDefault) * 2);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(32);
+    @include mq(tab) {
+      gap: rem(64);
+    }
+
+    .p-contact__title {
+      padding: rem(10);
+      @include mq(tab) {
+        padding: 0;
+      }
+    }
+  }
+}
