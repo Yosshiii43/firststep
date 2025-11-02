@@ -91,7 +91,6 @@ first stepができること
         margin-top: rem(32);
         margin-left: auto;
         margin-right: 0;
-        text-indent: -1em;
         
         @include mq(tab) {
           line-height: 1.75;
