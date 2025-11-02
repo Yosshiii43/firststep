@@ -73,7 +73,14 @@ first stepを応援してくださるかたへ
     }
 
     .p-message__img {
-      max-width: rem(680);
+      max-width: rem(280);
+      height: auto;
+      aspect-ratio: 28/25;
+      @include mq(tab) {
+        max-width: rem(680);
+        height: auto;
+        aspect-ratio: 340/307 ;
+      }
     }
   }
 }
