@@ -4,7 +4,7 @@
 @use "../../foundation/forwards" as *;
 
 .p-distribution {
-  padding-block: calc(var(--marginDefault) * 2) calc(var(--marginDefault) * 2);
+  padding-block: calc(var(--marginDefault) * 2) var(--marginDefault);
 
   &__inner {
     display: flex;

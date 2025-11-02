@@ -1,0 +1,79 @@
+/******************************
+first stepを応援してくださるかたへ
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-message {
+  padding-block: var(--marginDefault);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(32);
+    @include mq(tab) {
+      gap: rem(64);
+    }
+
+    .p-message__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(16);
+      margin-inline: -8px;
+      @include mq(tab) {
+        flex-direction: row;
+
+      }
+
+      > span {
+        text-align: center;
+        @include mq(tab) {
+          padding-inline: rem(48);
+          padding-inline: rclamp(0, 48, 1024, 1440);
+        }
+      }
+
+      img {
+        width: rclamp(80, 125, 375, 1024);
+        height: rclamp(80, 125, 375, 1024);
+      }
+    }
+
+    .p-message__body {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      max-width: rem(680);
+      @include mq(tab) {
+        gap: rem(64);
+      }
+
+      h3 {
+        font-size: rclamp(24, 32, 375, 1024);
+        line-height: normal;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: $color-lightGreen;
+        padding: rem(16) rem(20);
+        border-radius: 10px;
+        @include mq(tab) {
+          line-height: 1.25;
+        }
+      }
+
+      p {
+        font-size: rclamp(16, 24, 375, 1024);
+        line-height: 2;
+        @include mq(tab) {
+          line-height: 1.75;
+        }
+      }
+    }
+
+    .p-message__img {
+      max-width: rem(680);
+    }
+  }
+}
