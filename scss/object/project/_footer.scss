@@ -17,4 +17,50 @@ footer
       background-size: cover;
     }
   }
+  
+  &__inner {
+    background-color: $color-main;
+    padding-block: rem(12) calc(rem(164) + rem(24) + rem(12));
+    @media (min-width: 376px) and (max-width: 767px) {
+      width: auto;
+      padding-inline: rclamp(47.5, 120, 376, 767) rclamp(47.5, 120, 376, 767);
+    }
+    @include mq(tab) {
+      padding-block: 0 calc(rem(48) + rem(110));
+    }
+
+    .p-footer__body {
+      width: 100%;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      @include mq(tab) {
+        gap: rem(24);
+      }
+
+      .p-footer__button {
+        background-color: $color-white;
+        border-radius: 10px;
+        padding: rem(12) rem(40);
+        width: 100%;
+        max-width: rem(280);
+        margin-inline: auto;
+        @include mq(tab) {
+          padding: rem(12) rem(60);
+          width: rem(320);
+          max-width: none;
+        }
+      }
+
+      .p-footer__menu {
+        display: flex;
+        justify-content: center;
+        gap: rem(24);
+        @include mq(tab) {
+          gap: rem(48);
+        }
+      }
+    }
+  }
 }
