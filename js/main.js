@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //--------------------------------------------------------------------------
 // 足跡をじわっと出す
 //--------------------------------------------------------------------------
-
+/*
 document.addEventListener('DOMContentLoaded', () => {
  const targets = document.querySelectorAll(".c-blurTrigger");
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   targets.forEach((target) => observer.observe(target));
   });
-
+*/
 //--------------------------------------------------------------------------
 // お問い合わせフォーム
 //--------------------------------------------------------------------------
