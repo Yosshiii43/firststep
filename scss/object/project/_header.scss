@@ -13,29 +13,26 @@ header
     inset: 0;
     pointer-events: none; 
     z-index: 0;
+  }
 
-    //サークル
-    &::before {
-      position: absolute;
-      display: block;
-      content: "";
-      width: rem(80);
-      height: rem(80);
-      border-radius: 50%;
-      background-color: $color-main;
-      opacity: 0.5;
-      top: calc(-1 * rem(20));
-      right: calc(-1 * rem(19));
-      @include mq(tab) {
-        width: rem(120);
-        height: rem(120);
-      }
-      @include mq(pc) {
-        width: rem(160);
-        height: rem(160);
-        top: calc(-1 * rem(37));
-        right: calc(-1 * rclamp(80, 290, 1024, 1440));
-      }
+  //サークル
+  &__circle {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 1;
+    width: rem(80);
+    height: rem(80);
+    top: calc(-1 * rem(20));
+    right: calc(-1 * rem(19));
+    @include mq(tab) {
+      width: rem(120);
+      height: rem(120);
+    }
+    @include mq(pc) {
+      width: rem(160);
+      height: rem(160);
+      top: calc(-1 * rem(37));
+      right: calc(-1 * rclamp(80, 290, 1024, 1440));
     }
   }
 
