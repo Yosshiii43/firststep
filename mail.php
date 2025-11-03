@@ -73,7 +73,7 @@ $useToken = 1;
 $BccMail = "";
 
 // 管理者宛に送信されるメールのタイトル（件名）
-$subject = "【first step】サイトからのお問い合わせ";
+$subject = "【first step】サイトのお問い合わせフォーム";
 
 // 送信確認画面の表示(する=1, しない=0)
 $confirmDsp = 0;
@@ -107,7 +107,7 @@ $remail = 1;
 $refrom_name = "first step";
 
 // 差出人に送信確認メールを送る場合のメールのタイトル（上記で1を設定した場合のみ）
-$re_subject = "お問い合わせありがとうございました";
+$re_subject = "お問い合わせありがとうございます【first step】";
 
 //フォーム側の「名前」箇所のname属性の値　※自動返信メールの「○○様」の表示で使用します。
 //指定しない、または存在しない場合は、○○様と表示されないだけです。あえて無効にしてもOK
@@ -132,7 +132,7 @@ $mailSignature = <<< FOOTER
 
 ──────────────────────
 first step
-URL: https:/firststep.hop-step-osanpo.com"
+URL: https:/firststep.hop-step-osanpo.com
 ──────────────────────
 
 FOOTER;
