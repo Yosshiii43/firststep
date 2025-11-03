@@ -159,13 +159,28 @@ document.addEventListener('DOMContentLoaded', () => {
 //--------------------------------------------------------------------------
 // パララックス
 //--------------------------------------------------------------------------
-
 document.addEventListener('DOMContentLoaded', () => {
   const rellax = new Rellax('.rellax', {
-    speed: -2,
     center: false,
-    wrapper: null,
     vertical: true,
-    horizontal: false
+    horizontal: false,
   });
+
+  const rellaxElements = document.querySelectorAll('.rellax');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('is-active');
+      } else {
+        el.classList.remove('is-active');
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.1
+  });
+
+  rellaxElements.forEach((el) => observer.observe(el));
 });

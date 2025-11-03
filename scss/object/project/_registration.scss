@@ -9,23 +9,19 @@
   overflow: hidden;
   padding-block: var(--marginDefault) var(--marginDefault);
 
-  &__fp01 {
-    top: rem(553);
+  &__fp06 {
+    top: rem(571);
     left: calc(-1  * rem(100));
-    transform: scale(-1, 1);
-    rotate: -90deg;
     @include mq(tab) {
       top: rem(300);
-      left: calc(-1 * rclamp(120, 390, 768, 1440));
+      left: calc(-1 * rclamp(120, 392, 768, 1440));
     }
   }
-  &__fp02 {
-    top: rem(1578);
+  &__fp07 {
+    top: rem(1596);
     right: calc(-1  * rem(100));
-    rotate: 90deg;
-    transform: scale(-1, 1);
     @include mq(tab) {
-      top: calc(1000px - rclamp(280, 314, 768, 1440));
+      top: rem(689);
       right: calc(-1 * rclamp(120, 391, 768, 1440));
     }
   }

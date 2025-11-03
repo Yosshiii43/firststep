@@ -9,23 +9,20 @@ first stepができること
   overflow: hidden;
   padding-block: calc(var(--marginDefault) * 2) calc(var(--marginDefault));
 
-  &__fp01 {
-    top: rem(1099);
+    &__fp04 {
+    top: rem(1117);
     left: calc(-1  * rem(100));
-    transform: scale(1, -1);
     @include mq(tab) {
-      top: rclamp(940, 1185, 768, 1440);
-      left: calc(-1 * rclamp(120, 390, 768, 1440));
+      top: rem(1185);
+      left: calc(-1 * rclamp(120, 392, 768, 1440));
     }
   }
-  &__fp02 {
-    top: rem(1241);
+  &__fp05 {
+    top: rem(1259);
     right: calc(-1  * rem(100));
-    rotate: 180deg;
-    transform: scale(1, -1);
     @include mq(tab) {
-      top: rclamp(1200, 1347, 768, 1440);
-      right: calc(-1 * rclamp(120, 391, 768, 1440));
+      top: rem(1347);
+      right: calc(-1 * rclamp(120, 392, 768, 1440));
     }
   }
 
