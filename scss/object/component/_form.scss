@@ -52,6 +52,10 @@
           border-right: 2px solid $color-blue;
           border-bottom: 2px solid $color-blue;
           border-left: 2px solid $color-blue;
+
+          &::placeholder {
+            color: $color-Placeholder
+          }
         }
       }
     }
