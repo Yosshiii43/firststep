@@ -467,13 +467,13 @@
               <div class="c-form__item">
                 <label>
                   <span class="c-form__label">氏名<span class="c-form__required">※</span></span>
-                  <input class="c-form__input" type="text" name="氏名" placeholder="富士　太郎" required >
+                  <input class="c-form__input" type="text" name="氏名" autocomplete="name" placeholder="富士　太郎" required >
                 </label>
               </div>
               <div class="c-form__item">
                 <label>
                   <span class="c-form__label">メールアドレス<span class="c-form__required">※</span></span>
-                  <input class="c-form__input" type="text" name="メールアドレス" autocomplete="email" placeholder="abcde.efg@mail.add" required>
+                  <input class="c-form__input" type="email" name="メールアドレス" autocomplete="email" placeholder="abcde.efg@mail.add" required>
                 </label>
               </div>
               <div class="c-form__item c-form__itemColumn">
@@ -482,9 +482,12 @@
                   <textarea class="c-form__input" name="お問い合わせ内容" placeholder="お問い合わせ内容をご記載ください" required></textarea>
                 </label>
               </div>
+              <button class="c-form__btn js-formBtn" type="submit">送信する</button>
             </div><!-- c-form__body -->
-            <button class="c-form__btn js-formBtn" type="submit">送信する</button>
-            <p class="c-form__message js-thanksMsg" style="display:none">送信が完了しました。</p>
+            <p class="c-form__message js-thanksMsg" style="display:none">
+              送信が完了しました。<br>
+              お問い合わせありがとうございました。
+            </p>
           </form>
       </div><!--p-contact__inner -->
     </section><!-- p-contact -->
