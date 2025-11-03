@@ -12,25 +12,6 @@
     padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 50px);
   }
 
-  &__fp01 {
-    rotate: 180deg;
-    top: rem(30);
-    right: calc(-1  * rem(100));
-    @include mq(tab) {
-      top: rem(32);
-      right: calc(-1 * rclamp(120, 391, 768, 1440));
-    }
-  }
-
-  &__fp02 {
-    top: rem(446);
-    left: calc(-1  * rem(100));
-    @include mq(tab) {
-      top: rem(298);
-      left: calc(-1 * rclamp(120, 390, 768, 1440));
-    }
-  }
-
   &__inner {
     width: rclamp(280, 600, 375, 1024);
     display: flex;

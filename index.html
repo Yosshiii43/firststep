@@ -12,32 +12,505 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>first step | 富士市・富士宮市の子育て情報発信ツール</title>
 </head>
-<body>
-  <header class="p-header">
-    <div class="p-header__bg l-inner--bg"></div> <!-- 背景用 -->
-    <div class="p-header__inner">
-      <h1 class="p-header__title"><img src="./img/logo.svg" alt="first step"></h1>
+<body class="l-body">
+  <div class="p-wrapper">
+    <div class="p-decoration l-inner--bg">
+      <img class="p-decoration__fp01 c-footprints rellax" src="/img/img_footprints01.png" alt=""><!--p-hero内-->
+      <img class="p-decoration__fp02 c-footprints rellax" src="/img/img_footprints02.png" alt=""><!--p-connection内-->
+      <img class="p-decoration__fp03 c-footprints rellax" src="/img/img_footprints01.png" alt=""><!--p-connection内-->
+      <img class="p-decoration__fp04 c-footprints rellax" src="/img/img_footprints04.png" alt=""><!--p-service内-->
+      <img class="p-decoration__fp05 c-footprints rellax" src="/img/img_footprints05.png" alt=""><!--p-service内-->
+      <img class="p-decoration__fp06 c-footprints rellax" src="/img/img_footprints06.png" alt=""><!--p-registration内-->
+      <img class="p-decoration__fp07 c-footprints rellax" src="/img/img_footprints07.png" alt=""><!--p-registration内-->
+      <img class="p-decoration__fp08 c-footprints rellax" src="/img/img_footprints06.png" alt=""><!--p-registration2内-->
+      <img class="p-decoration__fp09 c-footprints rellax" src="/img/img_footprints07.png" alt=""><!--p-registration2内-->
     </div>
-  </header>
-  <main>
-    <section class="p-hero l-inner">
-      <div class="c-footprintsWrap l-inner--bg">
-        <img class="p-hero__fp01 c-footprints" src="/img/img_footprints01.png" alt="">
-      </div> <!-- 背景用 -->
-      <div class="p-hero__inner l-inner--hero">
-        <div class="p-hero__body">
-          <img class="p-hero__img" src="./img/hero_shakeHands.png" alt="">
-          <div class="p-hero__text">
-            <p class="c-zenMaru">誰かとつながる<br>
-                “はじめの一歩”<br>
-                を応援します</p>
-            <p>富士市・富士宮市を中心に活動する<br>
-                子育て支援団体の情報を配信する<br>
-                LINE公式アカウントです</p>
+    <header class="p-header">
+      <!--
+      <div class="p-header__bg l-inner--bg"></div>--><!-- 背景用 -->
+      <div class="p-header__inner">
+        <h1 class="p-header__title"><img src="./img/logo.svg" alt="first step"></h1>
+      </div>
+    </header>
+    <main>
+      <section class="p-hero l-inner">
+        <!--
+        <div class="c-footprintsWrap l-inner--bg">
+          <img class="p-hero__fp01 c-footprints" src="/img/img_footprints01.png" alt="">
+        </div>--><!-- 背景用 -->
+        <div class="p-hero__inner l-inner--hero">
+          <div class="p-hero__body">
+            <img class="p-hero__img" src="./img/hero_shakeHands.png" alt="">
+            <div class="p-hero__text">
+              <p class="c-zenMaru">誰かとつながる<br>
+                  “はじめの一歩”<br>
+                  を応援します</p>
+              <p>富士市・富士宮市を中心に活動する<br>
+                  子育て支援団体の情報を配信する<br>
+                  LINE公式アカウントです</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="p-hero__buttons c-buttons">
+        <div class="p-hero__buttons c-buttons">
+          <a class="c-button c-button--user" href="@@後で入れる@@" target="_blank">
+            <span class="c-button__kinds"><span>保護者・</span><span>一般のかた</span></span>
+            <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
+          </a>
+          <a class="c-button c-button--supporter" href="@@後で入れる@@" target="_blank">
+            <span class="c-button__kinds">支援者のかた</span>
+            <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
+          </a>
+        </div>
+      </section>
+      <section class="p-connection">
+        <!--
+        <div class="c-footprintsWrap l-inner--bg">
+          <img class="p-connection__fp01 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
+          <img class="p-connection__fp02 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
+        </div>--><!-- 背景用 -->
+        <div class="p-connection__inner l-inner">
+          <h2 class="p-connection__title c-hedding2"><span>こんな人と</span><span>つながりたい</span></h2>
+          <ul class="p-connection__list">
+            <li>子育ての悩みを一人で抱えているかた</li>
+            <li>地域の子育て支援情報をもっと知りたいかた</li>
+            <li>他の保護者や支援者とつながりたいかた</li>
+            <li>活動を広めたい子育て支援団体のかた</li>
+            <li>地域での発信や協力に関心があるかた</li>
+          </ul>
+          <img class="p-connection__img" src="/img/img_people.png" alt="">
+        </div>
+      </section><!-- p-connection -->
+
+      <section class="p-about">
+        <div class="c-wave c-wave--green"></div>
+        <div class="p-about__inner l-inner">
+          <h2 class="p-about__title c-hedding2">first stepとは</h2>
+          <ul class="p-about__voices">
+            <li class="p-about__voice">
+              <p>支援団体の情報がまとまっていたらいいのに</p>
+              <img src="/img/img_person01.png" alt="スマホを手に焦っている女性">
+            </li>
+            <li class="p-about__voice">
+              <p>子育てのことをもっと気軽に<br>学べたらいいのに</p>
+              <img src="/img/img_person02.png" alt="焦っている男性">
+            </li>
+            <li class="p-about__voice">
+              <p>もっと地域の活動に<br>参加したい</p>
+              <img src="/img/img_person03.png" alt="思案顔の男性">
+            </li>
+            <li class="p-about__voice">
+              <p>子育てを応援する活動をしている<br>けどなかなか届けられない</p>
+              <img src="/img/img_person04.png" alt="ため息をつく女性">
+            </li>
+            <li class="p-about__voice">
+              <p>こんなこと、どこに<br>相談すればいいの？</p>
+              <img src="/img/img_person05.png" alt="疑問を持つ女性">
+            </li>
+          </ul>
+          <div class="p-about__message l-inner--920">
+            <p>そんな声から生まれた</p>
+            <p class="c-zenMaru p-about__message--em"><span>地域のための</span><span>“はじめの一歩”</span></p>
+            <p>地域に点在する子育て支援情報を</p>
+            <p class="c-zenMaru p-about__message--em"><span>ひとつにつなぎ</span><span>&nbsp;LINEを通じて必要な人へ</span></p>
+            <p>やさしく届ける仕組みです</p>
+          </div>
+        </div>
+      </section><!-- p-about -->
+
+      <section class="p-service">
+        <!--
+        <div class="c-footprintsWrap l-inner--bg">
+          <img class="p-service__fp01 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
+          <img class="p-service__fp02 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
+        </div>--><!-- 背景用 -->
+        <div class="p-service__inner l-inner--920">
+          <h2 class="p-service__title c-hedding2"><span><span>first stepができる</span><span>こと</span></span></h2>
+          <div class="p-service__overview">
+            <p class="p-service__discription">子育てについて知りたい情報と支援団体のかたが伝えたい情報の双方をつなげます</p>
+            <picture class="p-service__img">
+              <source srcset="/img/img_overview_sp.png" media="(max-width: 767px)">
+              <img src="/img/img_overview_pc.png" 
+                    alt="first stepのサービス概要図。保護者や一般のかたへイベントや活動情報を配信し、支援団体の紹介や交流の場を提供。支援団体は情報発信や活動を通じて保護者をサポートできる仕組みを示しています。"
+                    width="1840" height="1816">
+            </picture>
+            <p class="p-service__note">※保護者ユーザーからのお問い合わせに対し、直接、対応可能な支援団体におつなぎする場合がございます</p>
+          </div><!-- p-service__overview -->
+          <div class="p-service__connect">
+            <p class="p-service__discription">現在の子育て状況に合う情報を提供し、地域とのつながりをサポートします</p>
+            <div class="p-service__lineWrap">
+              <div class="p-service__line">
+                <h3>つながる方法１</h3>
+                <img src="/img/img_line01.png" alt="line画面サンプル">
+                <div class="p-service__lineInner">
+                  <p>各支援団体からお預かりした情報配信のご依頼を、対象年齢や悩みに合わせて、保護者のかたへ配信いたします</p>
+                  <p>必要に応じて、イベントの申込フォームやリマインド配信などにも対応いたします</p>
+                  <p>支援団体皆さまの想いを保護者皆さまへと届けるためのサポートアカウントです</p>
+                </div>
+              </div>
+              <div class="p-service__line">
+                <h3>つながる方法２</h3>
+                <img src="/img/img_line02.png" alt="line画面サンプル">
+                <div class="p-service__lineInner">
+                  <p>地域の子育て支援団体からの情報を受け取るだけではなく、複数のカテゴリから自分の興味関心に合わせた情報を探すことができます</p>
+                  <p>（カテゴリ例）<br>
+                    　訪問・個別サポート<br>
+                    　外国人サポート<br>
+                    　妊娠・出産<br>
+                    　不妊・不育　　など<br>
+                    　
+                  </p>
+                </div>
+              </div>
+              <div class="p-service__line">
+                <h3>つながる方法３</h3>
+                <img src="/img/img_line03.png" alt="line画面サンプル">
+                <div class="p-service__lineInner">
+                  <p>地域で子育て支援をされている方々の知識や経験を活かしたオンライン講座も開講予定です</p>
+                  <p>first stepに登録している団体が保護者や地域の皆さまに伝えたい想いや情報を発信する場所です</p>
+                  <p>興味のある講座に参加することで新たなコミュニティともつながりやすくなります</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- p-service__connect -->
+        </div>
+      </section><!-- p-service -->
+
+      <section class="p-registration">
+        <!--
+        <div class="c-footprintsWrap l-inner--bg">
+          <img class="p-registration__fp01 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
+          <img class="p-registration__fp02 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
+        </div>--><!-- 背景用 -->
+        <div class="p-registration__inner l-inner--920">
+          <h2 class="p-registration__title c-hedding2"><span>簡単３ステップ！<br>LINE登録方法</span></h2>
+          <ol class="c-registrationList">
+            <li class="c-registrationList__li c-registrationList__li01">
+              <div class="c-registrationList__bg c-registrationList__bg01"></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <h3 class="c-zenMaru">友だち追加</h3>
+                <p>下記ボタンからご登録ください</p>
+              </div>
+              <div class="c-buttons c-c-registrationList__itemButton">
+                <a class="c-button c-button--user" href="@@後で入れる@@" target="_blank">
+                  <span class="c-button__kinds"><span>保護者・</span><span>一般のかた</span></span>
+                  <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
+                </a>
+                <a class="c-button c-button--supporter" href="@@後で入れる@@" target="_blank">
+                  <span class="c-button__kinds">支援者のかた</span>
+                  <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
+                </a>
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li02">
+              <div class="c-registrationList__bg c-registrationList__bg02"></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <h3 class="c-zenMaru">QRコードを読み取る</h3>
+                <p>スマートフォンなど、ネットにつながるデバイスでQRコードを読み取ってください</p>
+              </div>
+              <div class="c-registrationList__qr">
+                <img src="/img/qr_user.png" alt="保護者・一般のかた向けQRコード" width="400" height="432">
+              </div>
+              <div class="c-registrationList__qr">
+                <img src="/img/qr_supporter.png" alt="支援団体向けQRコード" width="400" height="432">
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li03">
+              <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <h3 class="c-zenMaru">アンケートに答える</h3>
+                <p>子育ても暮らしも十人十色</p>
+                <p>あなたに合わせたオーダーメイドの情報をお届けするために、アンケートへのご協力をお願いいたします</p>
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line04.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line05.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li04">
+              <div class="c-registrationList__bg c-registrationList__bg04"></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <h3 class="c-zenMaru">必要な情報が届き、想いがつながる</h3>
+                <p>保護者の皆さまには、自分に合った必要な情報が届きます</p>
+                <p>支援団体の皆さまは、トーク画面下部のメニューからいつでも「イベント・情報の配信依頼」が可能になります</p>
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line06.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line07.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="p-professional">
+        <div class="p-professional__inner l-inner--920">
+          <h2 class="p-professional__title c-hedding2">
+            <span>子どもに関わる専門資格をお持ちの皆さまへ</span>
+            <img src="/img/img_nursery-teacher.png" alt="" width="532" height="532">
+          </h2>
+          <div class="p-professional__body">
+          <p class="p-professional__introduction">first stepでは、医療・教育・保育・福祉などの資格を持つかたに、「専門職」としてのご登録もお願いしています</p>
+          <section class="p-professional__subject">
+            <h3 class="c-zenMaru">対象となるのは？</h3>
+            <p>医療・教育・保育・福祉などの資格をお持ちのかたで</p>
+            <ul>
+              <li class="u-addMarginBottom">現在も現場で活動されているかた</li>
+              <li class="u-addMarginBottom">今は別の道に進まれているかた</li>
+              <li>子育て支援団体の運営に携わっているかた</li>
+            </ul>
+            <p>資格を通じて培われた知識や経験を、地域の力として活かしていただければ幸いです</p>
+          </section>
+          <section class="p-professional__reason">
+            <h3 class="c-zenMaru">登録の理由について</h3>
+            <p>お一人おひとりの専門性や経験を地域に活かすことは、 子どもたちが安心して育つ社会をつくる大きな一歩になるからです</p>
+            <div>
+              <p class="u-addMarginBottom">ご登録いただくことで</p>
+              <ul>
+                <li class="u-addMarginBottom">人材募集やボランティア活動のご案内</li>
+                <li class="u-addMarginBottom">専門職を含めた学びや交流の場のご案内</li>
+              </ul>
+              <p>などの情報も受け取れるようになります</p>
+            </div>
+          </section>
+          </div><!-- p-professional__body -->
+        </div><!-- p-professional__inner -->
+      </section><!-- p-professional -->
+
+      <section class="p-registration2">
+        <!--
+        <div class="c-footprintsWrap l-inner--bg">
+          <img class="p-registration2__fp01 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
+          <img class="p-registration2__fp02 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
+        </div>--><!-- 背景用 -->
+        <div class="p-registration2__inner l-inner--920">
+          <h2 class="p-registration2__title c-hedding2">ご登録方法</h2>
+          <ol class="c-registrationList">
+            <li class="c-registrationList__li c-registrationList__li01">
+              <div class="c-registrationList__bg c-registrationList__bg01"></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <h3 class="c-zenMaru">「専門職(教育・医療・福祉など)のかた」をタップ</h3>
+                <p>「支援団体のかた」からLINE登録後、「専門職(教育・医療・福祉など)のかた」をタップします</p>
+              </div>
+              <div class="">
+                <a class="c-button c-button--supporter" href="@@後で入れる@@" target="_blank">
+                  <span class="c-button__kinds">支援者のかた</span>
+                  <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
+                </a>
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line08.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li02">
+              <div class="c-registrationList__bg c-registrationList__bg02"></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <h3 class="c-zenMaru">「専門職(教育・医療・福祉など)のかた」をタップ</h3>
+                <p>「支援団体のかた」からLINE登録後、「専門職(教育・医療・福祉など)のかた」をタップします</p>
+              </div>
+              <div class="c-registrationList__qr">
+                <img src="/img/qr_supporter.png" alt="支援団体向けQRコード" width="400" height="432">
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line08.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li03">
+              <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <h3 class="c-zenMaru">アンケートに答える</h3>
+                <p>お持ちの資格を選択します</p>
+                <p>複数の資格がございましたら、下の欄に記入をお願いします</p>
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line09.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li03--2">
+              <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <p>主に情報を受け取りたいかたは</p>
+                <p class="c-registrationList__greenBg">教育・医療・福祉・<br>公的機関・その他</p>
+                <p>主に情報を届けたいかたは</p>
+                <p class="c-registrationList__greenBg">フリーランスまたは<br>任意団体等の代表</p>
+                <p>をお選びください</p>
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line10.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li03--2">
+              <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <p>※その後、具体的な活動内容をお伺いする設問が追加で表示されます</p>
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line11.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li03--2">
+              <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <p>保護者として情報を受け取りたいかたは「はい」を選択してください</p>
+              </div>
+              <div class="c-registrationList__img">
+                <img src="/img/img_line12.png" alt="LINE画面サンプル" width="560" height="630">
+              </div>
+            </li>
+
+            <li class="c-registrationList__li c-registrationList__li04">
+              <div class="c-registrationList__bg c-registrationList__bg04"></div><!-- 縦線用 -->
+              <div class="c-registrationList__text">
+                <h3 class="c-zenMaru">登録完了</h3>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section><!-- p-registration2 -->
+
+      <section class="p-faq">
+        <div class="c-wave c-wave--orange"></div>
+        <div class="p-faq__wrap">
+          <div class="p-faq__inner l-inner--920">
+            <h2 class="p-faq__title c-zenMaru">よくある質問</h2>
+            <details name="accordion1" class="c-details">
+              <summary class="c-details__summary">
+                <span class="c-details__text">
+                  <span class="c-details__q">Q.</span>利用に費用はかかりますか？
+                </span>
+                <span class="c-details__icon"></span>
+              </summary>
+              <div class="c-details__content">
+                <span class="c-details__a">A. </span>無料でご利用いただけます。
+              </div>
+            </details>
+            <details name="accordion1" class="c-details">
+              <summary class="c-details__summary">
+                <span class="c-details__text">
+                  <span class="c-details__q">Q.</span>どこに住んでいても使えますか？
+                </span>
+                <span class="c-details__icon"></span>
+              </summary>
+              <div class="c-details__content">
+                <span class="c-details__a">A. </span>主に富士市・富士宮市周辺の情報が中心ですが、どなたでも登録可能です。
+              </div>
+            </details>
+            <details name="accordion1" class="c-details">
+              <summary class="c-details__summary">
+                <span class="c-details__text">
+                  <span class="c-details__q">Q.</span>生活環境が変わったため、ほしい情報を変更したいです。
+                </span>
+                <span class="c-details__icon"></span>
+              </summary>
+              <div class="c-details__content">
+                <span class="c-details__a">A. </span>LINEリッチメニュー「利用ガイド」または「登録情報」から、必要な項目を変更することができます。なお、学年の変更に関しては年度切り替えに合わせたメンテナンス時に自動で変更させていただきます。
+              </div>
+            </details>
+            <details name="accordion1" class="c-details">
+              <summary class="c-details__summary">
+                <span class="c-details__text">
+                  <span class="c-details__q">Q.</span>登録後、支援団体として活動を始めました。
+                </span>
+                <span class="c-details__icon"></span>
+              </summary>
+              <div class="c-details__content">
+                <span class="c-details__a">A. </span>LINEリッチメニュー「お問い合わせ」よりご連絡ください。登録情報の変更手続きを行います。支援団体としての活動を休止・終了した場合も同様にお問い合わせください。
+              </div>
+            </details>
+          </div>
+        </div>
+      </section><!-- p-faq -->
+
+      <section class="p-distribution">
+        <div class="p-distribution__inner l-inner--920">
+          <h2 class="p-distribution__title c-hedding2">
+            <img src="/img/img_hart-and-stacked-hands.png" alt="" width="250" height="250">
+            <span><span>想いに寄り添う</span><span>配信を</span></span>
+          </h2>
+          <div class="p-distribution__body c-zenMaru">
+            <p>first stepでは、ひとりひとりの立場や関心に合わせて必要な情報だけをLINEでお届けします</p>
+            <p>その人にとって “ちょうどいい支援” を無理なく自然につなげるしくみです</p>
+            <p>登録後のアンケートにご回答いただくことで、あなた専用のオーダーメイド配信が始まります</p>
+            <p>あなたの「知りたい」も「届けたい」も</p>
+            <p>ここから、つながっていきます</p>
+          </div>
+          <img class="p-distribution__img" src="/img/img_explanation.png" alt="" width="884" height="642">
+        </div>
+      </section><!-- p-distribution -->
+
+      <section class="p-message">
+        <div class="p-message__inner l-inner--920">
+          <h2 class="p-message__title c-hedding2">
+            <img src="/img/img_gift.png" alt="" width="250" height="250">
+            <span>first stepを応援して<br>くださるかたへ</span>
+            <img src="/img/img_bouquet.png" alt="" width="250" height="250">
+          </h2>
+          <section class="p-message__body c-zenMaru">
+            <h3><span>first stepへの</span><span>ご支援について</span></h3>
+            <p>first step は地域に暮らす一人ひとりの声に寄り添い、子育て支援や情報発信を通じてあたたかなつながりを育む小さなプロジェクトです</p>
+            <p>first step の活動は皆さまからの温かいご支援によって支えられています</p>
+            <p>この取り組みを応援したい、もっと多くの人に届けたいという想いを「支援」という形でお寄せいただけると嬉しいです</p>
+            <p>いただいた支援は地域の保護者や子どもたちに寄り添う情報発信の強化や、つながりを育む仕組みの充実に活用させていただきます</p>
+            <p>詳しくはLINE公式アカウントにてご案内しています</p>
+          </section>
+          <img class="p-message__img" src="/img/img_tree.png" alt="" width="1360" height="1228">
+          <section class="p-message__body c-zenMaru">
+            <h3>協賛のご協力について</h3>
+            <p>当団体の理念や活動にご賛同いただけるかたに向けた協力金の受付窓口を設けております</p>
+            <p>皆さまからの温かいご支援は、地域の子育てを支える仕組みづくりと、より多くの方に必要な情報やつながりを届けるための、継続的な活動の大きな力となります</p>
+            <p>方針や理念に共感してくださる皆さまと共に、“安心して子育てができる社会”の実現を目指していきたいです</p>
+            <p>協賛については以下お問い合わせよりご一報ください</p>
+          </section>
+        </div>
+      </section><!-- p-message -->
+
+      <section class="p-contact">
+        <div class="p-contact__inner  l-inner--760">
+          <h2 class="p-contact__title c-hedding2">お問い合わせ</h2>
+            <form class="c-form js-form" method="post" action="mail.php">
+              <div class="c-form__body ">
+                <p class="c-form__note">※は必須項目です</p>
+                <input type="hidden" name="ajax" value="1">
+                <div class="c-form__item">
+                  <label>
+                    <span class="c-form__label">氏名<span class="c-form__required">※</span></span>
+                    <input class="c-form__input" type="text" name="氏名" autocomplete="name" placeholder="富士　太郎" required >
+                  </label>
+                </div>
+                <div class="c-form__item">
+                  <label>
+                    <span class="c-form__label">メールアドレス<span class="c-form__required">※</span></span>
+                    <input class="c-form__input" type="email" name="メールアドレス" autocomplete="email" placeholder="abcde.efg@mail.add" required>
+                  </label>
+                </div>
+                <div class="c-form__item c-form__itemColumn">
+                  <label>
+                    <span class="c-form__label">お問い合わせ内容<span class="c-form__required">※</span></span>
+                    <textarea class="c-form__input" name="お問い合わせ内容" placeholder="お問い合わせ内容をご記載ください" required></textarea>
+                  </label>
+                </div>
+                <button class="c-form__btn js-formBtn" type="submit">送信する</button>
+              </div><!-- c-form__body -->
+              <p class="c-form__message js-thanksMsg" style="display:none">
+                送信が完了しました。<br>
+                お問い合わせありがとうございました。
+              </p>
+            </form>
+        </div><!--p-contact__inner -->
+      </section><!-- p-contact -->
+
+      <div class="c-buttons p-fixedButtons">
         <a class="c-button c-button--user" href="@@後で入れる@@" target="_blank">
           <span class="c-button__kinds"><span>保護者・</span><span>一般のかた</span></span>
           <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
@@ -47,480 +520,26 @@
           <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
         </a>
       </div>
-    </section>
-    <section class="p-connection">
-      <div class="c-footprintsWrap l-inner--bg">
-        <img class="p-connection__fp01 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
-        <img class="p-connection__fp02 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
-      </div> <!-- 背景用 -->
-      <div class="p-connection__inner l-inner">
-        <h2 class="p-connection__title c-hedding2"><span>こんな人と</span><span>つながりたい</span></h2>
-        <ul class="p-connection__list">
-          <li>子育ての悩みを一人で抱えているかた</li>
-          <li>地域の子育て支援情報をもっと知りたいかた</li>
-          <li>他の保護者や支援者とつながりたいかた</li>
-          <li>活動を広めたい子育て支援団体のかた</li>
-          <li>地域での発信や協力に関心があるかた</li>
-        </ul>
-        <img class="p-connection__img" src="/img/img_people.png" alt="">
-      </div>
-    </section><!-- p-connection -->
+    </main>
 
-    <section class="p-about">
-      <div class="c-wave c-wave--green"></div>
-      <div class="p-about__inner l-inner">
-        <h2 class="p-about__title c-hedding2">first stepとは</h2>
-        <ul class="p-about__voices">
-          <li class="p-about__voice">
-            <p>支援団体の情報がまとまっていたらいいのに</p>
-            <img src="/img/img_person01.png" alt="スマホを手に焦っている女性">
-          </li>
-          <li class="p-about__voice">
-            <p>子育てのことをもっと気軽に<br>学べたらいいのに</p>
-            <img src="/img/img_person02.png" alt="焦っている男性">
-          </li>
-          <li class="p-about__voice">
-            <p>もっと地域の活動に<br>参加したい</p>
-            <img src="/img/img_person03.png" alt="思案顔の男性">
-          </li>
-          <li class="p-about__voice">
-            <p>子育てを応援する活動をしている<br>けどなかなか届けられない</p>
-            <img src="/img/img_person04.png" alt="ため息をつく女性">
-          </li>
-          <li class="p-about__voice">
-            <p>こんなこと、どこに<br>相談すればいいの？</p>
-            <img src="/img/img_person05.png" alt="疑問を持つ女性">
-          </li>
-        </ul>
-        <div class="p-about__message l-inner--920">
-          <p>そんな声から生まれた</p>
-          <p class="c-zenMaru p-about__message--em"><span>地域のための</span><span>“はじめの一歩”</span></p>
-          <p>地域に点在する子育て支援情報を</p>
-          <p class="c-zenMaru p-about__message--em"><span>ひとつにつなぎ</span><span>&nbsp;LINEを通じて必要な人へ</span></p>
-          <p>やさしく届ける仕組みです</p>
-        </div>
-      </div>
-    </section><!-- p-about -->
-
-    <section class="p-service">
-      <div class="c-footprintsWrap l-inner--bg">
-        <img class="p-service__fp01 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
-        <img class="p-service__fp02 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
-      </div> <!-- 背景用 -->
-      <div class="p-service__inner l-inner--920">
-        <h2 class="p-service__title c-hedding2"><span><span>first stepができる</span><span>こと</span></span></h2>
-        <div class="p-service__overview">
-          <p class="p-service__discription">子育てについて知りたい情報と支援団体のかたが伝えたい情報の双方をつなげます</p>
-          <picture class="p-service__img">
-            <source srcset="/img/img_overview_sp.png" media="(max-width: 767px)">
-            <img src="/img/img_overview_pc.png" 
-                  alt="first stepのサービス概要図。保護者や一般のかたへイベントや活動情報を配信し、支援団体の紹介や交流の場を提供。支援団体は情報発信や活動を通じて保護者をサポートできる仕組みを示しています。"
-                  width="1840" height="1816">
-          </picture>
-          <p class="p-service__note">※保護者ユーザーからのお問い合わせに対し、直接、対応可能な支援団体におつなぎする場合がございます</p>
-        </div><!-- p-service__overview -->
-        <div class="p-service__connect">
-          <p class="p-service__discription">現在の子育て状況に合う情報を提供し、地域とのつながりをサポートします</p>
-          <div class="p-service__lineWrap">
-            <div class="p-service__line">
-              <h3>つながる方法１</h3>
-              <img src="/img/img_line01.png" alt="line画面サンプル">
-              <div class="p-service__lineInner">
-                <p>各支援団体からお預かりした情報配信のご依頼を、対象年齢や悩みに合わせて、保護者のかたへ配信いたします</p>
-                <p>必要に応じて、イベントの申込フォームやリマインド配信などにも対応いたします</p>
-                <p>支援団体皆さまの想いを保護者皆さまへと届けるためのサポートアカウントです</p>
-              </div>
-            </div>
-            <div class="p-service__line">
-              <h3>つながる方法２</h3>
-              <img src="/img/img_line02.png" alt="line画面サンプル">
-              <div class="p-service__lineInner">
-                <p>地域の子育て支援団体からの情報を受け取るだけではなく、複数のカテゴリから自分の興味関心に合わせた情報を探すことができます</p>
-                <p>（カテゴリ例）<br>
-                  　訪問・個別サポート<br>
-                  　外国人サポート<br>
-                  　妊娠・出産<br>
-                  　不妊・不育　　など<br>
-                  　
-                </p>
-              </div>
-            </div>
-            <div class="p-service__line">
-              <h3>つながる方法３</h3>
-              <img src="/img/img_line03.png" alt="line画面サンプル">
-              <div class="p-service__lineInner">
-                <p>地域で子育て支援をされている方々の知識や経験を活かしたオンライン講座も開講予定です</p>
-                <p>first stepに登録している団体が保護者や地域の皆さまに伝えたい想いや情報を発信する場所です</p>
-                <p>興味のある講座に参加することで新たなコミュニティともつながりやすくなります</p>
-              </div>
-            </div>
+    <footer class="p-footer">
+      <div class="p-footer__head"></div><!--背景用-->
+      <div class="p-footer__inner">
+        <div class="p-footer__body">
+          <div class="p-footer__button">
+            <a href="#">
+              <img src="/img/logo.svg" alt="first step">
+            </a>
           </div>
-        </div><!-- p-service__connect -->
-      </div>
-    </section><!-- p-service -->
-
-    <section class="p-registration">
-      <div class="c-footprintsWrap l-inner--bg">
-        <img class="p-registration__fp01 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
-        <img class="p-registration__fp02 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
-      </div><!-- 背景用 -->
-      <div class="p-registration__inner l-inner--920">
-        <h2 class="p-registration__title c-hedding2"><span>簡単３ステップ！<br>LINE登録方法</span></h2>
-        <ol class="c-registrationList">
-          <li class="c-registrationList__li c-registrationList__li01">
-            <div class="c-registrationList__bg c-registrationList__bg01"></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <h3 class="c-zenMaru">友だち追加</h3>
-              <p>下記ボタンからご登録ください</p>
-            </div>
-            <div class="c-buttons c-c-registrationList__itemButton">
-              <a class="c-button c-button--user" href="@@後で入れる@@" target="_blank">
-                <span class="c-button__kinds"><span>保護者・</span><span>一般のかた</span></span>
-                <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
-              </a>
-              <a class="c-button c-button--supporter" href="@@後で入れる@@" target="_blank">
-                <span class="c-button__kinds">支援者のかた</span>
-                <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
-              </a>
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li02">
-            <div class="c-registrationList__bg c-registrationList__bg02"></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <h3 class="c-zenMaru">QRコードを読み取る</h3>
-              <p>スマートフォンなど、ネットにつながるデバイスでQRコードを読み取ってください</p>
-            </div>
-            <div class="c-registrationList__qr">
-              <img src="/img/qr_user.png" alt="保護者・一般のかた向けQRコード" width="400" height="432">
-            </div>
-            <div class="c-registrationList__qr">
-              <img src="/img/qr_supporter.png" alt="支援団体向けQRコード" width="400" height="432">
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li03">
-            <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <h3 class="c-zenMaru">アンケートに答える</h3>
-              <p>子育ても暮らしも十人十色</p>
-              <p>あなたに合わせたオーダーメイドの情報をお届けするために、アンケートへのご協力をお願いいたします</p>
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line04.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line05.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li04">
-            <div class="c-registrationList__bg c-registrationList__bg04"></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <h3 class="c-zenMaru">必要な情報が届き、想いがつながる</h3>
-              <p>保護者の皆さまには、自分に合った必要な情報が届きます</p>
-              <p>支援団体の皆さまは、トーク画面下部のメニューからいつでも「イベント・情報の配信依頼」が可能になります</p>
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line06.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line07.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="p-professional">
-      <div class="p-professional__inner l-inner--920">
-        <h2 class="p-professional__title c-hedding2">
-          <span>子どもに関わる専門資格をお持ちの皆さまへ</span>
-          <img src="/img/img_nursery-teacher.png" alt="" width="532" height="532">
-        </h2>
-        <div class="p-professional__body">
-        <p class="p-professional__introduction">first stepでは、医療・教育・保育・福祉などの資格を持つかたに、「専門職」としてのご登録もお願いしています</p>
-        <section class="p-professional__subject">
-          <h3 class="c-zenMaru">対象となるのは？</h3>
-          <p>医療・教育・保育・福祉などの資格をお持ちのかたで</p>
-          <ul>
-            <li class="u-addMarginBottom">現在も現場で活動されているかた</li>
-            <li class="u-addMarginBottom">今は別の道に進まれているかた</li>
-            <li>子育て支援団体の運営に携わっているかた</li>
+          <ul class="p-footer__menu">
+            <li><a href="/terms/">利用規約</a></li>
+            <li><a href="/privacy/">プライバシーポリシー</a></li>
           </ul>
-          <p>資格を通じて培われた知識や経験を、地域の力として活かしていただければ幸いです</p>
-        </section>
-        <section class="p-professional__reason">
-          <h3 class="c-zenMaru">登録の理由について</h3>
-          <p>お一人おひとりの専門性や経験を地域に活かすことは、 子どもたちが安心して育つ社会をつくる大きな一歩になるからです</p>
-          <div>
-            <p class="u-addMarginBottom">ご登録いただくことで</p>
-            <ul>
-              <li class="u-addMarginBottom">人材募集やボランティア活動のご案内</li>
-              <li class="u-addMarginBottom">専門職を含めた学びや交流の場のご案内</li>
-            </ul>
-            <p>などの情報も受け取れるようになります</p>
-          </div>
-        </section>
-        </div><!-- p-professional__body -->
-      </div><!-- p-professional__inner -->
-    </section><!-- p-professional -->
-
-    <section class="p-registration2">
-      <div class="c-footprintsWrap l-inner--bg">
-        <img class="p-registration2__fp01 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
-        <img class="p-registration2__fp02 c-footprints c-blurTrigger" src="/img/img_footprints01.png" alt="">
-      </div><!-- 背景用 -->
-      <div class="p-registration2__inner l-inner--920">
-        <h2 class="p-registration2__title c-hedding2">ご登録方法</h2>
-        <ol class="c-registrationList">
-          <li class="c-registrationList__li c-registrationList__li01">
-            <div class="c-registrationList__bg c-registrationList__bg01"></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <h3 class="c-zenMaru">「専門職(教育・医療・福祉など)のかた」をタップ</h3>
-              <p>「支援団体のかた」からLINE登録後、「専門職(教育・医療・福祉など)のかた」をタップします</p>
-            </div>
-            <div class="">
-              <a class="c-button c-button--supporter" href="@@後で入れる@@" target="_blank">
-                <span class="c-button__kinds">支援者のかた</span>
-                <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
-              </a>
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line08.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li02">
-            <div class="c-registrationList__bg c-registrationList__bg02"></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <h3 class="c-zenMaru">「専門職(教育・医療・福祉など)のかた」をタップ</h3>
-              <p>「支援団体のかた」からLINE登録後、「専門職(教育・医療・福祉など)のかた」をタップします</p>
-            </div>
-            <div class="c-registrationList__qr">
-              <img src="/img/qr_supporter.png" alt="支援団体向けQRコード" width="400" height="432">
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line08.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li03">
-            <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <h3 class="c-zenMaru">アンケートに答える</h3>
-              <p>お持ちの資格を選択します</p>
-              <p>複数の資格がございましたら、下の欄に記入をお願いします</p>
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line09.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li03--2">
-            <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <p>主に情報を受け取りたいかたは</p>
-              <p class="c-registrationList__greenBg">教育・医療・福祉・<br>公的機関・その他</p>
-              <p>主に情報を届けたいかたは</p>
-              <p class="c-registrationList__greenBg">フリーランスまたは<br>任意団体等の代表</p>
-              <p>をお選びください</p>
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line10.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li03--2">
-            <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <p>※その後、具体的な活動内容をお伺いする設問が追加で表示されます</p>
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line11.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li03--2">
-            <div class="c-registrationList__bg c-registrationList__bg03 "></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <p>保護者として情報を受け取りたいかたは「はい」を選択してください</p>
-            </div>
-            <div class="c-registrationList__img">
-              <img src="/img/img_line12.png" alt="LINE画面サンプル" width="560" height="630">
-            </div>
-          </li>
-
-          <li class="c-registrationList__li c-registrationList__li04">
-            <div class="c-registrationList__bg c-registrationList__bg04"></div><!-- 縦線用 -->
-            <div class="c-registrationList__text">
-              <h3 class="c-zenMaru">登録完了</h3>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section><!-- p-registration2 -->
-
-    <section class="p-faq">
-      <div class="c-wave c-wave--orange"></div>
-      <div class="p-faq__wrap">
-        <div class="p-faq__inner l-inner--920">
-          <h2 class="p-faq__title c-zenMaru">よくある質問</h2>
-          <details name="accordion1" class="c-details">
-            <summary class="c-details__summary">
-              <span class="c-details__text">
-                <span class="c-details__q">Q.</span>利用に費用はかかりますか？
-              </span>
-              <span class="c-details__icon"></span>
-            </summary>
-            <div class="c-details__content">
-              <span class="c-details__a">A. </span>無料でご利用いただけます。
-            </div>
-          </details>
-          <details name="accordion1" class="c-details">
-            <summary class="c-details__summary">
-              <span class="c-details__text">
-                <span class="c-details__q">Q.</span>どこに住んでいても使えますか？
-              </span>
-              <span class="c-details__icon"></span>
-            </summary>
-            <div class="c-details__content">
-              <span class="c-details__a">A. </span>主に富士市・富士宮市周辺の情報が中心ですが、どなたでも登録可能です。
-            </div>
-          </details>
-          <details name="accordion1" class="c-details">
-            <summary class="c-details__summary">
-              <span class="c-details__text">
-                <span class="c-details__q">Q.</span>生活環境が変わったため、ほしい情報を変更したいです。
-              </span>
-              <span class="c-details__icon"></span>
-            </summary>
-            <div class="c-details__content">
-              <span class="c-details__a">A. </span>LINEリッチメニュー「利用ガイド」または「登録情報」から、必要な項目を変更することができます。なお、学年の変更に関しては年度切り替えに合わせたメンテナンス時に自動で変更させていただきます。
-            </div>
-          </details>
-          <details name="accordion1" class="c-details">
-            <summary class="c-details__summary">
-              <span class="c-details__text">
-                <span class="c-details__q">Q.</span>登録後、支援団体として活動を始めました。
-              </span>
-              <span class="c-details__icon"></span>
-            </summary>
-            <div class="c-details__content">
-              <span class="c-details__a">A. </span>LINEリッチメニュー「お問い合わせ」よりご連絡ください。登録情報の変更手続きを行います。支援団体としての活動を休止・終了した場合も同様にお問い合わせください。
-            </div>
-          </details>
         </div>
       </div>
-    </section><!-- p-faq -->
-
-    <section class="p-distribution">
-      <div class="p-distribution__inner l-inner--920">
-        <h2 class="p-distribution__title c-hedding2">
-          <img src="/img/img_hart-and-stacked-hands.png" alt="" width="250" height="250">
-          <span><span>想いに寄り添う</span><span>配信を</span></span>
-        </h2>
-        <div class="p-distribution__body c-zenMaru">
-          <p>first stepでは、ひとりひとりの立場や関心に合わせて必要な情報だけをLINEでお届けします</p>
-          <p>その人にとって “ちょうどいい支援” を無理なく自然につなげるしくみです</p>
-          <p>登録後のアンケートにご回答いただくことで、あなた専用のオーダーメイド配信が始まります</p>
-          <p>あなたの「知りたい」も「届けたい」も</p>
-          <p>ここから、つながっていきます</p>
-        </div>
-        <img class="p-distribution__img" src="/img/img_explanation.png" alt="" width="884" height="642">
-      </div>
-    </section><!-- p-distribution -->
-
-    <section class="p-message">
-      <div class="p-message__inner l-inner--920">
-        <h2 class="p-message__title c-hedding2">
-          <img src="/img/img_gift.png" alt="" width="250" height="250">
-          <span>first stepを応援して<br>くださるかたへ</span>
-          <img src="/img/img_bouquet.png" alt="" width="250" height="250">
-        </h2>
-        <section class="p-message__body c-zenMaru">
-          <h3><span>first stepへの</span><span>ご支援について</span></h3>
-          <p>first step は地域に暮らす一人ひとりの声に寄り添い、子育て支援や情報発信を通じてあたたかなつながりを育む小さなプロジェクトです</p>
-          <p>first step の活動は皆さまからの温かいご支援によって支えられています</p>
-          <p>この取り組みを応援したい、もっと多くの人に届けたいという想いを「支援」という形でお寄せいただけると嬉しいです</p>
-          <p>いただいた支援は地域の保護者や子どもたちに寄り添う情報発信の強化や、つながりを育む仕組みの充実に活用させていただきます</p>
-          <p>詳しくはLINE公式アカウントにてご案内しています</p>
-        </section>
-        <img class="p-message__img" src="/img/img_tree.png" alt="" width="1360" height="1228">
-        <section class="p-message__body c-zenMaru">
-          <h3>協賛のご協力について</h3>
-          <p>当団体の理念や活動にご賛同いただけるかたに向けた協力金の受付窓口を設けております</p>
-          <p>皆さまからの温かいご支援は、地域の子育てを支える仕組みづくりと、より多くの方に必要な情報やつながりを届けるための、継続的な活動の大きな力となります</p>
-          <p>方針や理念に共感してくださる皆さまと共に、“安心して子育てができる社会”の実現を目指していきたいです</p>
-          <p>協賛については以下お問い合わせよりご一報ください</p>
-        </section>
-      </div>
-    </section><!-- p-message -->
-
-    <section class="p-contact">
-      <div class="p-contact__inner  l-inner--760">
-        <h2 class="p-contact__title c-hedding2">お問い合わせ</h2>
-          <form class="c-form js-form" method="post" action="mail.php">
-            <div class="c-form__body ">
-              <p class="c-form__note">※は必須項目です</p>
-              <input type="hidden" name="ajax" value="1">
-              <div class="c-form__item">
-                <label>
-                  <span class="c-form__label">氏名<span class="c-form__required">※</span></span>
-                  <input class="c-form__input" type="text" name="氏名" autocomplete="name" placeholder="富士　太郎" required >
-                </label>
-              </div>
-              <div class="c-form__item">
-                <label>
-                  <span class="c-form__label">メールアドレス<span class="c-form__required">※</span></span>
-                  <input class="c-form__input" type="email" name="メールアドレス" autocomplete="email" placeholder="abcde.efg@mail.add" required>
-                </label>
-              </div>
-              <div class="c-form__item c-form__itemColumn">
-                <label>
-                  <span class="c-form__label">お問い合わせ内容<span class="c-form__required">※</span></span>
-                  <textarea class="c-form__input" name="お問い合わせ内容" placeholder="お問い合わせ内容をご記載ください" required></textarea>
-                </label>
-              </div>
-              <button class="c-form__btn js-formBtn" type="submit">送信する</button>
-            </div><!-- c-form__body -->
-            <p class="c-form__message js-thanksMsg" style="display:none">
-              送信が完了しました。<br>
-              お問い合わせありがとうございました。
-            </p>
-          </form>
-      </div><!--p-contact__inner -->
-    </section><!-- p-contact -->
-
-    <div class="c-buttons p-fixedButtons">
-      <a class="c-button c-button--user" href="@@後で入れる@@" target="_blank">
-        <span class="c-button__kinds"><span>保護者・</span><span>一般のかた</span></span>
-        <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
-      </a>
-      <a class="c-button c-button--supporter" href="@@後で入れる@@" target="_blank">
-        <span class="c-button__kinds">支援者のかた</span>
-        <span class="c-button__name"><span>LINE登録は</span><span>こちらから</span></span>
-      </a>
-    </div>
-  </main>
-
-  <footer class="p-footer">
-    <div class="p-footer__head"></div><!--背景用-->
-    <div class="p-footer__inner">
-      <div class="p-footer__body">
-        <div class="p-footer__button">
-          <a href="#">
-            <img src="/img/logo.svg" alt="first step">
-          </a>
-        </div>
-        <ul class="p-footer__menu">
-          <li><a href="/terms/">利用規約</a></li>
-          <li><a href="/privacy/">プライバシーポリシー</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
   <script src="/js/main.js" defer></script>
+  <script src="/js/rellax.min.js" defer></script>
 </body>
 </html>

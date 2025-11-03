@@ -1,0 +1,10 @@
+/******************************
+wrapper
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-wrapper {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}

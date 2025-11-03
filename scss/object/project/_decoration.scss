@@ -1,0 +1,105 @@
+/******************************
+decoration （円・足跡）
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; 
+  z-index: 0;
+  overflow: visible;
+
+  &__inner {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  &__circle {
+
+  }
+
+  &__fp01 {
+    display: none;
+    @include mq(tab) {
+      display: block;
+      opacity: 0.5;
+      top: rem(170);
+      left: calc(-1 * rclamp(120, 392 ,768, 1440));
+    }
+  }
+
+  &__fp02 {
+    top: rem(883);
+    right: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(870);
+      right: calc(-1 * rclamp(120, 392, 768, 1440));
+    }
+  }
+
+  &__fp03 {
+    top: rem(1299);
+    left: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(1137);
+      left: calc(-1 * rclamp(120, 392, 768, 1440));
+    }
+  }
+
+  //p-service内
+  &__fp04 {
+    top: rem(4285);
+    left: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(4062);
+      left: calc(-1 * rclamp(120, 392, 768, 1440));
+    }
+  }
+  &__fp05 {
+    top: rem(4427);
+    right: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(4224);
+      right: calc(-1 * rclamp(120, 392, 768, 1440));
+    }
+  }
+
+  //p-registration内
+  &__fp06 {
+    top: rem(7560);
+    left: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(5661);
+      left: calc(-1 * rclamp(120, 392, 768, 1440));
+    }
+  }
+  &__fp07 {
+    top: rem(8585);
+    right: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(6050);
+      right: calc(-1 * rclamp(120, 391, 768, 1440));
+    }
+  }
+
+  //p-registration2内
+  &__fp08 {
+    top: rem(11175);
+    right: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(8779);
+      right: calc(-1 * rclamp(120, 391, 768, 1440));
+    }
+  }
+
+  &__fp09 {
+    top: rem(13786);
+    right: calc(-1  * rem(100));
+    @include mq(tab) {
+      top: rem(10463);
+      right: calc(-1 * rclamp(120, 391, 768, 1440));
+    }
+  }
+}

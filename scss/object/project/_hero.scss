@@ -13,16 +13,6 @@ hero
     margin-block: 0 calc(var(--marginDefault) - 6px);
   }
 
-  &__fp01 {
-    display: none;
-    @include mq(tab) {
-      display: block;
-      opacity: 0.5;
-      top: rclamp(8, 47, 768, 1440);
-      left: calc(-1 * rclamp(120, 391 ,768, 1440));
-    }
-  }
-
   &__inner {
     .p-hero__body {
       width: 100%;
