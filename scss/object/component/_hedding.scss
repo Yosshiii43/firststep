@@ -14,3 +14,15 @@ hedding
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.c-hedding1 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: rclamp(32, 48, 375, 1024);
+  line-height: 1.5;
+  letter-spacing: -0.528px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,93 @@
+/******************************
+下層ページ
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-lower {
+  &__header {
+    padding-block: rem(75) rem(40);
+    @include mq(tab) {
+      padding-block: rem(150) rem(80);
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    @include mq(tab) {
+      gap: rem(40);
+      font-size: rem(24);
+      letter-spacing: -0.264px;
+    }
+
+    ol {
+      counter-reset: number;
+      li {
+        position: relative;
+        padding-left: rem(24);
+        @include mq(tab) {
+          padding-left: rem(36);
+        }
+
+        &::before {
+          counter-increment: number;
+          content: '' counter(number) '.';
+          left: 4px;
+          position: absolute;
+          @include mq(tab) {
+            left: 8px;
+          }
+        }
+      }
+    }
+
+    ul {
+      li {
+        position: relative;
+        padding-left: 1em;
+        @include mq(tab) {
+          padding-left: rem(36);
+        }
+
+        &::before {
+          display: inline-block;
+          content: "";
+          width: rem(5);
+          height: rem(5);
+          border-radius: 50%;
+          background-color: $color-text;
+          position: absolute;
+          top: rem(12.5);
+          left: rem(5.5);
+          @include mq(tab) {
+            width: rem(7);
+            height: rem(7);
+            top: rem(20);
+            left: rem(14);
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding-block: rem(40);
+
+    a {
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-block: rem(10);
+      width: rem(240);
+      background-color: $color-main;
+      border-radius: 10px;
+      margin-inline: auto;
+      @include mq(tab) {
+        font-size: rem(24);
+        width: rem(340);
+      }
+    }
+  }
+}

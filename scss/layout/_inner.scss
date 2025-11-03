@@ -78,3 +78,16 @@
     max-width: calc(rem(760) + var(--inner-pl) + var(--inner-pr));
   }
 }
+
+.l-inner--680 {
+  width: 100%;
+  padding-inline: var(--inner-pl) var(--inner-pr);
+  margin-inline: auto;
+  box-sizing: border-box;
+  @media (min-width: 376px) and (max-width: 767px) {
+    padding-inline: rclamp(47.5, 120, 376, 767) rclamp(47.5, 120, 376, 767);
+  }
+  @include mq(pc) {
+    max-width: calc(rem(680) + var(--inner-pl) + var(--inner-pr));
+  }
+}
