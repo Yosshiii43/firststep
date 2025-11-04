@@ -35,6 +35,8 @@ footer
       display: flex;
       flex-direction: column;
       gap: rem(32);
+      margin-top: -2px;
+      padding-top: 2px;
       @include mq(tab) {
         gap: rem(24);
       }
