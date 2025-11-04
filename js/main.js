@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const parallaxImages = document.querySelectorAll('.parallax');
 
   new simpleParallax(parallaxImages, {
-    orientation: 'up', // 上方向に動く（他に 'down', 'left', 'right' なども指定可能）
+    orientation: 'down', // 上方向に動く（他に 'down', 'left', 'right' なども指定可能）
     scale: 1.4,        // スクロールに合わせて画像を拡大しながら動かす（背景が見切れないように）
     delay: 0.8,        // 動きに遅延をつけて滑らかに
     transition: 'cubic-bezier(0,0,0,1)', // イージングを調整

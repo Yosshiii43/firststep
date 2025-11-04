@@ -7,9 +7,9 @@
   position: relative;
   width: 100vw;
   overflow: hidden;
-  padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 25px);
+  padding-top: var(--marginDefault);
   @include mq(tab) {
-    padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 50px - 4px);
+    padding-top: var(--marginDefault);
   }
 
   &__fp08 {
@@ -22,9 +22,10 @@
   }
 
   &__fp09 {
-    bottom: 0;
+    bottom: 25px;
     right: calc(-1  * rem(100));
     @include mq(tab) {
+      bottom: 140px;
       right: calc(-1 * rclamp(120, 391, 768, 1440));
     }
   }
@@ -33,7 +34,9 @@
     display: flex;
     flex-direction: column;
     gap: rem(32);
+    padding-bottom: calc(var(--marginDefault) * 2 - 25px);
     @include mq(tab) {
+      padding-bottom: calc(var(--marginDefault) * 2 - 50px);
       gap: rem(64);
     }
   }
