@@ -53,6 +53,9 @@
     .c-registrationList__img {
       max-width: 280px;
       margin-inline: auto;
+      @include mq(tab) {
+        margin-inline: 0;
+      }
     }
   }
 
