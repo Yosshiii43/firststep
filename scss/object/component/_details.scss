@@ -31,7 +31,7 @@
       gap: rem(8);
       @include mq(tab) {
         grid-template-columns: rem(26) 1fr;
-        gap: rem(8);
+        gap: rem(9);
       }
 
       .c-details__q {
@@ -39,7 +39,7 @@
         display: inline-block;
         width: rem(17);
         @include mq(tab) {
-          width: rem(26);
+          width: rem(24);
         }
       }
     }
@@ -64,6 +64,7 @@
     @include mq(tab) {
       margin-top: rem(25);
       grid-template-columns: rem(26) 1fr;
+      gap: rem(9);
     }
 
     .c-details__a {
@@ -71,7 +72,7 @@
       width: rem(17);
       color: $color-textOrenge;
       @include mq(tab) {
-        font-size: rem(26);
+        font-size: rem(24);
         line-height: 1;
       }
     }
