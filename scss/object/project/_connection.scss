@@ -7,16 +7,16 @@
   position: relative;
   width: 100vw;
   overflow: hidden;
-  padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 25px);
+  padding-top: var(--marginDefault);
   @include mq(tab) {
-    padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - 50px);
+    padding-top: var(--marginDefault);
   }
 
   &__fp02 {
     top: rem(24);
     right: calc(-1  * rem(100));
     @include mq(tab) {
-      top: rem(43);
+      top: rem(28);
       right: calc(-1 * rclamp(120, 392, 768, 1440));
     }
   }
@@ -25,7 +25,7 @@
     top: rem(450);
     left: calc(-1  * rem(100));
     @include mq(tab) {
-      top: rem(310);
+      top: rem(305);
       left: calc(-1 * rclamp(120, 392, 768, 1440));
     }
   }
@@ -41,6 +41,10 @@
     margin-inline: auto;
     position: relative;
     z-index: 1;
+    padding-bottom: calc(var(--marginDefault) * 2 - 25px);
+    @include mq(tab) {
+      padding-bottom: calc(var(--marginDefault) * 2 - 50px);
+    }
 
     .p-connection__title {
       padding: rem(10);

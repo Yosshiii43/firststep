@@ -9,13 +9,13 @@ first stepとは
   overflow: hidden;
 
   &__inner {
-    padding-block: calc(var(--marginDefault) * 2 - 25px) calc(var(--marginDefault) * 2);
     background-color: $color-paleGreen;
     display: flex;
     flex-direction: column;
     gap: rem(32);
+    padding-block:  calc(var(--marginDefault) * 2 - 25px) calc(var(--marginDefault) * 2);
     @include mq(tab) {
-      padding-block: calc(var(--marginDefault) * 2 - 50px) calc(var(--marginDefault) * 2);
+      padding-block:  calc(var(--marginDefault) * 2 - 50px) calc(var(--marginDefault) * 2);
       gap: rem(64);
     }
 
