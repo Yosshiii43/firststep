@@ -11,10 +11,8 @@
     display: flex;
     flex-direction: column;
     gap: rem(32);
-    margin-bottom: rem(32);
     @include mq(tab) {
       gap: rem(20);
-      margin-bottom: rem(64);
     }
 
     .c-form__note {
@@ -100,5 +98,8 @@
     border-radius: 10px;
     background-color: $color-blue;
     margin-inline: auto;
+    @include mq(tab) {
+      margin-top: rem(44);
+    }
   }
 }
