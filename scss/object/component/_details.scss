@@ -63,7 +63,7 @@
     gap: rem(8);
     @include mq(tab) {
       margin-top: rem(25);
-      grid-template-columns: rem(26) 1fr;
+      grid-template-columns: rem(26) 1fr rem(40);
       gap: rem(9);
     }
 
