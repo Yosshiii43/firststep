@@ -10,7 +10,7 @@ first stepができること
   padding-block: calc(var(--marginDefault) * 2) calc(var(--marginDefault));
 
     &__fp04 {
-    top: rem(1117);
+    top: rem(1097);
     left: calc(-1  * rem(100));
     @include mq(tab) {
       top: rclamp(940, 1185, 768, 1440);
@@ -18,7 +18,7 @@ first stepができること
     }
   }
   &__fp05 {
-    top: rem(1259);
+    top: rem(1239);
     right: calc(-1  * rem(100));
     @include mq(tab) {
       top: rclamp(1200, 1347, 768, 1440);

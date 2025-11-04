@@ -13,19 +13,18 @@
   }
 
   &__fp08 {
-    top: rem(145);
+    top: rem(125);
     right: calc(-1  * rem(100));
     @include mq(tab) {
-      top: rem(191);
+      top: rem(185);
       right: calc(-1 * rclamp(120, 391, 768, 1440));
     }
   }
 
   &__fp09 {
-    top: rem(2556);
+    bottom: 0;
     right: calc(-1  * rem(100));
     @include mq(tab) {
-      top: rem(1875);
       right: calc(-1 * rclamp(120, 391, 768, 1440));
     }
   }
