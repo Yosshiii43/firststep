@@ -21,7 +21,7 @@
     top: rem(1596);
     right: calc(-1  * rem(100));
     @include mq(tab) {
-      top: rem(689);
+      top: calc(1000px - rclamp(280, 314, 768, 1440));
       right: calc(-1 * rclamp(120, 391, 768, 1440));
     }
   }

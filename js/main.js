@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 //--------------------------------------------------------------------------
-// パララックス
+// パララックス(simpleParallax.js)
 //--------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const parallaxImages = document.querySelectorAll('.parallax');

@@ -18,7 +18,7 @@ hero
     @include mq(tab) {
       display: block;
       opacity: 0.5;
-      top: rem(46);
+      top: rem(58);
       left: calc(-1 * rclamp(120, 392 ,768, 1440));
     }
   }

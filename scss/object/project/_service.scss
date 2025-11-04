@@ -13,7 +13,7 @@ first stepができること
     top: rem(1117);
     left: calc(-1  * rem(100));
     @include mq(tab) {
-      top: rem(1185);
+      top: rclamp(940, 1185, 768, 1440);
       left: calc(-1 * rclamp(120, 392, 768, 1440));
     }
   }
@@ -21,7 +21,7 @@ first stepができること
     top: rem(1259);
     right: calc(-1  * rem(100));
     @include mq(tab) {
-      top: rem(1347);
+      top: rclamp(1200, 1347, 768, 1440);
       right: calc(-1 * rclamp(120, 392, 768, 1440));
     }
   }
