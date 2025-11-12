@@ -4,7 +4,7 @@
 @use "../../foundation/forwards" as *;
 
 .p-contact {
-  padding-block: var(--marginDefault) calc(var(--marginDefault) * 2);
+  padding-block: var(--marginDefault) calc(var(--marginDefault) * 2 - rem(2));
 
   &__inner {
     display: flex;
