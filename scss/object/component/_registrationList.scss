@@ -47,6 +47,9 @@
       h3 {
         font-size: rclamp(24, 32, 375, 1024);
         line-height: normal;
+        @include mq(tab) {
+          line-height: 1.25;
+        }
       }
     }
 
