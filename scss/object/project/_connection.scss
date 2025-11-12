@@ -16,7 +16,7 @@
     top: rem(55);
     right: calc(-1  * rem(100));
     @include mq(tab) {
-      top: rem(91);
+      top: rem(106);
       right: calc(-1 * rclamp(120, 392, 768, 1440));
     }
   }
